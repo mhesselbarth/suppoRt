@@ -9,14 +9,14 @@ Save.Function.rds <- function(object, file, ...){
   if (file.exists(file)){
     input <- menu(title="Do you want to overwrite already existing file?", choices=c("Yes", "No"))
     if(input==1){
-      base::saveRDS(file=file, ...)
+      base::saveRDS(object=object, file=file, ...)
       print(paste0("Existing file ", file, " overwriten"))
     }
     else{print("File not saved")}
   }
 
   else{
-    base::saveRDS(file=file, ...)
+    base::saveRDS(object=object, file=file, ...)
     print(paste0("New file ", file, " written"))
   }
 }
