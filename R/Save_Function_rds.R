@@ -5,7 +5,7 @@
 #' @param file [\code{string(1)}]\cr Path and name where the file is saved
 
 #' @export
-Save.Function.rds <- function(file=stop("'file' must be specified"), ...){
+Save.Function.rds <- function(object, file, ...){
   if (file.exists(file)){
     input <- menu(title="Do you want to overwrite already existing file?", choices=c("Yes", "No"))
     if(input==1){
