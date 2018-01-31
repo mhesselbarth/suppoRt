@@ -6,6 +6,11 @@
 \usage{
 Save.Function.rds(file = stop("'file' must be specified"), ...)
 }
+\arguments{
+\item{file}{[\code{string(1)}]\cr Path and name where the file is saved}
+
+\item{object}{[\code{R object(1)}]\cr R object to save}
+}
 \description{
 This function checks if the file aready exists. See ?base::saveRDS() for more information
 }
