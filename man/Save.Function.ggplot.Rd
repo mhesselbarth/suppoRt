@@ -4,13 +4,14 @@
 \alias{Save.Function.ggplot}
 \title{Function to save ggplot}
 \usage{
-Save.Function.ggplot(object, file, ...)
+Save.Function.ggplot(plot, filename, ...)
 }
 \arguments{
-\item{object}{[\code{R object(1)}]\cr R object to save}
+\item{plot}{[\code{ggplot(1)}]\cr Plot to save}
 
-\item{file}{[\code{string(1)}]\cr Path and name where the file is saved}
+\item{filename}{[\code{string(1)}]\cr File name to create on disk}
 }
 \description{
-This function checks if the file aready exists. See ?ggplot2::ggsave() for more information
+This function checks if the plot aready exists before saving it.
+See ?ggplot2::ggsave() for more information
 }

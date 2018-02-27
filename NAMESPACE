@@ -2,4 +2,3 @@
 
 export(Save.Function.ggplot)
 export(Save.Function.rds)
-export(Set.Path)

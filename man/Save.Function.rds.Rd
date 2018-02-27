@@ -7,10 +7,11 @@
 Save.Function.rds(object, file, ...)
 }
 \arguments{
-\item{object}{[\code{R object(1)}]\cr R object to save}
+\item{object}{[\code{R object(1)}]\cr R object to serialize}
 
-\item{file}{[\code{string(1)}]\cr Path and name where the file is saved}
+\item{file}{[\code{string(1)}]\cr Connection or the name of the file where the R object is saved}
 }
 \description{
-This function checks if the file aready exists. See ?base::saveRDS() for more information
+This function checks if the file aready exists before saving it.
+See ?base::saveRDS() for more information
 }
