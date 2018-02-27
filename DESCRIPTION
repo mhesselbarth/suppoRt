@@ -1,12 +1,16 @@
 Package: UtilityFunctions
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Utility functions
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Author@R: person("Maximilian H.K.", "Hesselbarth", 
+                  email = "maximililan.hesselbarth@uni-goettingen.de",
+                  role = c("aut", "cre"))
+Author: Maximilian H.K. Hesselbarth
+Maintainer: Maximilian H.K. Hesselbarth <maximililan.hesselbarth@uni-goettingen.de>
+Description: The package is a growing collection of utility functions.
+License:  GPL-3
 Encoding: UTF-8
 LazyData: true
+Depends: R (>= 3.1.0)
+Imports: ggplot2
 RoxygenNote: 6.0.1.9000
