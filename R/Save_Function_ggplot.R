@@ -10,19 +10,19 @@ Save.Function.ggplot <- function(plot, filename, path, ...){
 
   complete_file <- base::file.path(path, filename)
 
-  base::print(base::paste0("Trying to save plot: ", complete_file))
+  base::cat(base::paste0("Trying to save ggplot:\n", complete_file, "\n\n"))
 
   if (base::file.exists(complete_file)){
     input <- utils::menu(title="Do you want to overwrite already existing ggplot?", choices=c("Yes", "No"))
     if(input==1){
       ggplot2::ggsave(plot=plot, filename=filename, path=path, ...)
-      base::print("Existing ggplot overwriten")
+      base::cat("Existing ggplot overwriten \n")
     }
-    else{base::print("ggplot not saved")}
+    else{base::cat("ggplot not saved \n")}
 
   }
   else{
     ggplot2::ggsave(plot=plot, filename=filename, path=path, ...)
-    base::print("New ggplot written")
+    base::cat("New ggplot written \n")
   }
 }
