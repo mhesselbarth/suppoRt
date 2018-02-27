@@ -4,7 +4,7 @@
 \alias{Save.Function.ggplot}
 \title{Function to save ggplot}
 \usage{
-Save.Function.ggplot(plot, filename, ...)
+Save.Function.ggplot(plot, filename, path, ...)
 }
 \arguments{
 \item{plot}{[\code{ggplot(1)}]\cr Plot to save}
