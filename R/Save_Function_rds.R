@@ -7,17 +7,20 @@
 
 #' @export
 Save.Function.rds <- function(object, file, ...){
+
+  base::print(base::paste0("Trying to save file: ", file, "\n\n"))
+
   if (base::file.exists(file)){
     input <- utils::menu(title="Do you want to overwrite already existing file?", choices=c("Yes", "No"))
     if(input==1){
       base::saveRDS(object=object, file=file, ...)
-      base::print(base::paste0("Existing file ", file, " overwriten"))
+      base::print("Existing file overwriten \n")
     }
-    else{base::print("File not saved")}
+    else{base::print("File not saved \n")}
   }
 
   else{
     base::saveRDS(object=object, file=file, ...)
-    base::print(base::paste0("New file ", file, " written"))
+    base::print("New file written \n")
   }
 }
