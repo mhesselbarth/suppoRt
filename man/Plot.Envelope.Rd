@@ -5,7 +5,8 @@
 \title{Function to plot simulation envelopes}
 \usage{
 Plot.Envelope(input, labels = c("clustering", " randomness", "segregation"),
-  full_fun = T)
+  title = NULL, xlab = NULL, ylab = NULL, full_fun = T,
+  standarized = F)
 }
 \arguments{
 \item{input}{[\code{envelope(1)}]\cr Envelope object of the spatstat package}
@@ -15,7 +16,15 @@ Plot.Envelope(input, labels = c("clustering", " randomness", "segregation"),
 \cr 2 = lo < obs < hi
 \cr 3 = obs < lo}
 
-\item{full_fun}{[\code{logical(1)}]\cr Plot full function or only line to indicate
+\item{title}{[\code{string(1)}]\cr Title of the plot}
+
+\item{xlab}{[\code{string(1)}]\cr x label of the plot}
+
+\item{ylab}{[\code{string(1)}]\cr y label of the plot}
+
+\item{full_fun}{[\code{logical(1)}]\cr Plot full function or only line to indicate}
+
+\item{standarized}{[\code{logical(1)}]\cr If TRUE obs = obs - theo
 deviation from null model}
 }
 \description{
