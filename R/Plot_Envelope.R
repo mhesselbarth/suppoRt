@@ -24,7 +24,7 @@ Plot.Envelope <- function(input,
                           full_fun = T,
                           standarized = F){
 
-  if(!is(input, 'envelope')){stop('Please provide envelope object of the spatstat package')}
+  if(!is(input, 'envelope') && !is(input, 'data.frame')){stop('Please provide envelope object or dataframe')}
 
   if(length(labels) !=  3){
     labels <- c('clustering', ' randomness', 'segregation')
