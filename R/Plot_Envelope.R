@@ -10,12 +10,13 @@
 #' \cr 1 = obs > hi
 #' \cr 2 = lo < obs < hi
 #' \cr 3 = obs < lo
+#' @param title [\code{string(1)}]\cr Title of the plot
 #' @param full_fun [\code{logical(1)}]\cr Plot full function or only line to indicate
 #' deviation from null model
 
-#' @importFrom magrittr "%>%"
 #' @export
 Plot.Envelope <- function(input, labels=c('clustering', ' randomness', 'segregation'),
+                          title = '',
                           full_fun=T){
 
   if(!is(input, "envelope")){stop('Please provide envelope object of the spatstat package')}
@@ -46,7 +47,7 @@ Plot.Envelope <- function(input, labels=c('clustering', ' randomness', 'segregat
       ggplot2::scale_color_manual(name='', values=c("#440154FF", "#238A8DFF", "#FDE725FF")) +
       # ggplot2::scale_color_manual(name='', values=color_scale) +
       ggplot2::scale_linetype_manual(name='', values=c(1,2)) +
-      ggplot2::labs(x='r', y='f(r)') +
+      ggplot2::labs(x='r', y='f(r)', title = title) +
       ggplot2::theme_bw()
   }
 

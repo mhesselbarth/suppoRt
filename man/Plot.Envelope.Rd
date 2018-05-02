@@ -5,7 +5,7 @@
 \title{Function to plot simulation envelopes}
 \usage{
 Plot.Envelope(input, labels = c("clustering", " randomness", "segregation"),
-  full_fun = T)
+  title = "", full_fun = T)
 }
 \arguments{
 \item{input}{[\code{envelope(1)}]\cr Envelope object of the spatstat package}
@@ -14,6 +14,8 @@ Plot.Envelope(input, labels = c("clustering", " randomness", "segregation"),
 \cr 1 = obs > hi
 \cr 2 = lo < obs < hi
 \cr 3 = obs < lo}
+
+\item{title}{[\code{string(1)}]\cr Title of the plot}
 
 \item{full_fun}{[\code{logical(1)}]\cr Plot full function or only line to indicate
 deviation from null model}
