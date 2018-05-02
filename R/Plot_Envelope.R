@@ -61,9 +61,9 @@ Plot.Envelope <- function(input,
     gg_plot <- data %>%
       ggplot2::ggplot() +
       ggplot2::geom_ribbon(ggplot2::aes(x = r, ymin = lo, ymax = hi), fill = 'grey') +
-      ggplot2::geom_line(ggplot2::aes(x = r, y = obs, linetype = 'Observed'), size = 1) +
-      ggplot2::geom_line(ggplot2::aes(x = r, y = theo, linetype = 'Theoretical'), size = 0.75) +
-      ggplot2::geom_line(ggplot2::aes(x = r, y = min(c(lo, obs)), colour = type, group = 'x'), size = 2.5) +
+      ggplot2::geom_line(ggplot2::aes(x = r, y = obs, linetype = 'Observed'), size = 0.5) +
+      ggplot2::geom_line(ggplot2::aes(x = r, y = theo, linetype = 'Theoretical'), size = 0.5, colour = 'red') +
+      ggplot2::geom_line(ggplot2::aes(x = r, y = min(c(lo, obs)), colour = type, group = 'x'), size = 3.5) +
       ggplot2::scale_color_manual(name = '', values = color_scale) +
       ggplot2::scale_linetype_manual(name = '', values = c(1,2)) +
       ggplot2::labs(x = xlab, y = ylab, title = title) +
