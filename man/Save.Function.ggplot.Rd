@@ -4,12 +4,16 @@
 \alias{Save.Function.ggplot}
 \title{Function to save ggplot}
 \usage{
-Save.Function.ggplot(plot, filename, path, ...)
+Save.Function.ggplot(plot, filename, path = NULL, overwrite = FALSE, ...)
 }
 \arguments{
 \item{plot}{[\code{ggplot(1)}]\cr Plot to save}
 
 \item{filename}{[\code{string(1)}]\cr File name to create on disk}
+
+\item{path}{[\code{string(1)}]\cr Path to save plot to (combined with filename)}
+
+\item{overwrite}{[\code{logical(1)}]\cr Overwrite if the plot alreay exists}
 }
 \description{
 This function checks if the plot aready exists before saving it.

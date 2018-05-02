@@ -6,21 +6,22 @@
 #' @param file [\code{string(1)}]\cr Connection or the name of the file where the R object is saved
 
 #' @export
-Save.Function.rds <- function(object, file, ...){
+Save.Function.rds <- function(object,  filename, path = NULL, overwrite = FALSE, ...){
 
-  base::print(base::paste0("Trying to save file: ", file, "\n\n"))
+  if(is.null(path)){path <- getwd()}
+  complete_file <- file.path(path, filename)
+  cat("Trying to save file: ", complete_file, "\n\n")
 
   if (base::file.exists(file)){
-    input <- utils::menu(title="Do you want to overwrite already existing file?", choices=c("Yes", "No"))
-    if(input==1){
-      base::saveRDS(object=object, file=file, ...)
-      base::print("Existing file overwriten \n")
+    if(overwrite == TRUE){
+      saveRDS(object=object, file=complete_file, ...)
+      print("Existing file overwriten \n")
     }
-    else{base::print("File not saved \n")}
+    else{print("File not saved \n")}
   }
 
   else{
-    base::saveRDS(object=object, file=file, ...)
-    base::print("New file written \n")
+    saveRDS(object=object, file=file, ...)
+    cat("New file written \n")
   }
 }

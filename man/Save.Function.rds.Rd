@@ -4,7 +4,7 @@
 \alias{Save.Function.rds}
 \title{Function to save rds objects}
 \usage{
-Save.Function.rds(object, file, ...)
+Save.Function.rds(object, filename, path = NULL, overwrite = FALSE, ...)
 }
 \arguments{
 \item{object}{[\code{R object(1)}]\cr R object to serialize}
