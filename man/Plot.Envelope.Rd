@@ -5,7 +5,7 @@
 \title{Function to plot simulation envelopes}
 \usage{
 Plot.Envelope(input, labels = c("clustering", " randomness", "segregation"),
-  title = NULL, xlab = NULL, ylab = NULL, full_fun = T,
+  title = NULL, xlab = NULL, ylab = NULL, size = 5, full_fun = T,
   standarized = F)
 }
 \arguments{
@@ -22,6 +22,8 @@ Plot.Envelope(input, labels = c("clustering", " randomness", "segregation"),
 
 \item{ylab}{[\code{string(1)}]\cr y label of the plot}
 
+\item{size}{[\code{numeric(1)}]\cr Size of the colour bar}
+
 \item{full_fun}{[\code{logical(1)}]\cr Plot full function or only line to indicate}
 
 \item{standarized}{[\code{logical(1)}]\cr If TRUE obs = obs - theo
@@ -31,5 +33,5 @@ deviation from null model}
 This functions provides a plotting style for envelope objects of the spatstat
 package (for more information please see ?spatstat::envelope). The location of the
 observed value in relation to the simulation envelopes of the null model data is
-indicated by an additional color bar at the bottom of the plot.
+indicated by an additional colour bar at the bottom of the plot.
 }
