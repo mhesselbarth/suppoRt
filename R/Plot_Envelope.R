@@ -3,7 +3,7 @@
 #' This functions provides a plotting style for envelope objects of the spatstat
 #' package (for more information please see ?spatstat::envelope). The location of the
 #' observed value in relation to the simulation envelopes of the null model data is
-#' indicated by an additional color bar at the bottom of the plot.
+#' indicated by an additional colour bar at the bottom of the plot.
 #'
 #' @param input [\code{envelope(1)}]\cr Envelope object of the spatstat package
 #' @param labels [\code{string(3)}]\cr Name of the labels
@@ -13,6 +13,7 @@
 #' @param title [\code{string(1)}]\cr Title of the plot
 #' @param xlab [\code{string(1)}]\cr x label of the plot
 #' @param ylab [\code{string(1)}]\cr y label of the plot
+#' @param size [\code{numeric(1)}]\cr Size of the colour bar
 #' @param full_fun [\code{logical(1)}]\cr Plot full function or only line to indicate
 #' @param standarized [\code{logical(1)}]\cr If TRUE obs = obs - theo
 #' deviation from null model
@@ -21,6 +22,7 @@
 Plot.Envelope <- function(input,
                           labels = c('clustering', ' randomness', 'segregation'),
                           title = NULL, xlab = NULL, ylab = NULL,
+                          size = 5,
                           full_fun = T,
                           standarized = F){
 
@@ -61,9 +63,9 @@ Plot.Envelope <- function(input,
     gg_plot <- data %>%
       ggplot2::ggplot() +
       ggplot2::geom_ribbon(ggplot2::aes(x = r, ymin = lo, ymax = hi), fill = 'grey') +
-      ggplot2::geom_line(ggplot2::aes(x = r, y = obs, linetype = 'Observed'), size = 1) +
-      ggplot2::geom_line(ggplot2::aes(x = r, y = theo, linetype = 'Theoretical'), size = 0.75) +
-      ggplot2::geom_line(ggplot2::aes(x = r, y = min(c(lo, obs)), colour = type, group = 'x'), size = 2.5) +
+      ggplot2::geom_line(ggplot2::aes(x = r, y = obs, linetype = 'Observed'), size = 0.5) +
+      ggplot2::geom_line(ggplot2::aes(x = r, y = theo, linetype = 'Theoretical'), size = 0.5) +
+      ggplot2::geom_line(ggplot2::aes(x = r, y = min(c(lo, obs)), colour = type, group = 'x'), size = size) +
       ggplot2::scale_color_manual(name = '', values = color_scale) +
       ggplot2::scale_linetype_manual(name = '', values = c(1,2)) +
       ggplot2::labs(x = xlab, y = ylab, title = title) +
