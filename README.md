@@ -14,13 +14,25 @@ devtools::install_github(repo = 'mhesselbarth/UtilityFunctions')
 
 
 ```r
-pp <- spatstat::rThomas(kappa = 15, scale = 0.25, mu = 5)
-sim_envel <- spatstat::envelope(Y = pp, fun = pcf, divisor = 'd')
+pp <- spatstat.data::spruces
+sim_envel <- spatstat::envelope(Y = pp, fun = pcf, divisor = 'd',
+                                nrank = 5, nsim = 499)
 
 result <- Plot.Envelope(input = sim_envel, xlab = 'r', ylab = 'pcf(r)')
 
-Save.Function.ggplot(plot = result, filename = 'example_plot.jpeg')
+result_bars <- Plot.Envelope(input = sim_envel, xlab = 'r', ylab = 'pcf(r)', 
+                             full_fun = FALSE)
+``` 
+
+<img src="vignettes/example_plot_full.jpeg"  width="100%" />
+<img src="vignettes/example_plot_bars.jpeg"  width="100%" />
+
+``` 
+Save.Function.ggplot(plot = result, filename = 'example_plot_full.jpeg')
+Save.Function.ggplot(plot = result_bars, filename = 'example_plot_bars.jpeg')
 ```
+
+
 
 ### Authors
 
