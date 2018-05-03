@@ -10,7 +10,7 @@ Save.Function.rds(object, filename = NULL, path = NULL, overwrite = FALSE,
 \arguments{
 \item{object}{[\code{R object(1)}]\cr R object to serialize}
 
-\item{file}{[\code{string(1)}]\cr Connection or the name of the file where the R object is saved}
+\item{file}{[\code{string(1)}]\cr Connection or the name of the file where the R object is saved. The file extension must be .rds}
 }
 \description{
 This function checks if the file aready exists before saving it.

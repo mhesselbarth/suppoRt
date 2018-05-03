@@ -10,7 +10,7 @@ Save.Function.ggplot(plot, filename = NULL, path = NULL,
 \arguments{
 \item{plot}{[\code{ggplot(1)}]\cr Plot to save}
 
-\item{filename}{[\code{string(1)}]\cr File name to create on disk}
+\item{filename}{[\code{string(1)}]\cr File name to create on disk. The device (e.g. jpeg) must be specified as file extension}
 
 \item{path}{[\code{string(1)}]\cr Path to save plot to (combined with filename)}
 
