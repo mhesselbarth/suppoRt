@@ -77,7 +77,7 @@ Plot.Envelope <- function(input,
     gg_plot <-  data %>%
       ggplot2::ggplot() +
       ggplot2::geom_line(ggplot2::aes(x = r, y = 0, colour = type, group = 'x'), size = 5) +
-      ggplot2::ylim(0, 0.1) +
+      ggplot2::coord_cartesian(ylim = c(0, 0.1)) +
       ggplot2::scale_color_manual(name = '', values = color_scale) +
       ggplot2::labs(x = xlab, y = '', title = title) +
       ggplot2::theme_classic(base_size = 15) +
