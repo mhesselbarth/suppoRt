@@ -8,9 +8,11 @@
 #' @param overwrite [\code{logical(1)}]\cr Overwrite if the plot alreay exists
 
 #' @export
-Save.Function.ggplot <- function(plot, filename, path = NULL, overwrite = FALSE, ...){
+Save.Function.ggplot <- function(plot, filename = NULL, path = NULL, overwrite = FALSE, ...){
 
   if(is.null(path)){path <- getwd()}
+  if(is.null(filename)){filename <- 'R_plot'}
+
   complete_file <- base::file.path(path, filename)
   cat(paste0("Trying to save ggplot:\n", complete_file, "\n\n"))
 
