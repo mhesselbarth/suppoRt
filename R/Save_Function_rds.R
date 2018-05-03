@@ -3,12 +3,14 @@
 #' This function checks if the file aready exists before saving it.
 #' See ?base::saveRDS() for more information
 #' @param object [\code{R object(1)}]\cr R object to serialize
-#' @param file [\code{string(1)}]\cr Connection or the name of the file where the R object is saved
+#' @param file [\code{string(1)}]\cr Connection or the name of the file where the R object is saved. The file extension must be .rds
 
 #' @export
-Save.Function.rds <- function(object,  filename, path = NULL, overwrite = FALSE, ...){
+Save.Function.rds <- function(object,  filename = NULL, path = NULL, overwrite = FALSE, ...){
 
   if(is.null(path)){path <- getwd()}
+  if(is.null(filename)){filename <- 'rds_file.rds'}
+
   complete_file <- file.path(path, filename)
   cat("Trying to save file: ", complete_file, "\n\n")
 

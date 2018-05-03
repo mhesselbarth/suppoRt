@@ -4,12 +4,13 @@
 \alias{Save.Function.ggplot}
 \title{Function to save ggplot}
 \usage{
-Save.Function.ggplot(plot, filename, path = NULL, overwrite = FALSE, ...)
+Save.Function.ggplot(plot, filename = NULL, path = NULL,
+  overwrite = FALSE, ...)
 }
 \arguments{
 \item{plot}{[\code{ggplot(1)}]\cr Plot to save}
 
-\item{filename}{[\code{string(1)}]\cr File name to create on disk}
+\item{filename}{[\code{string(1)}]\cr File name to create on disk. The device (e.g. jpeg) must be specified as file extension}
 
 \item{path}{[\code{string(1)}]\cr Path to save plot to (combined with filename)}
 
