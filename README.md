@@ -27,6 +27,9 @@ result_bars <- Plot.Envelope(input = sim_envel, xlab = 'r', ylab = 'pcf(r)',
 <img src="vignettes/example_plot_full.jpeg"  width="50%" />
 <img src="vignettes/example_plot_bars.jpeg"  width="50%" />
 
+
+Plots are saved using the ggsave function of the ggplot2-package. However, if a file with the same name already exists, it is not overwritten (unless you set overwrite = TRUE). Also R-objects can be saved as .rds-files without overwritting already present files. 
+
 ``` 
 Save.Function.ggplot(plot = result, filename = 'example_plot_full.jpeg')
 Save.Function.ggplot(plot = result_bars, filename = 'example_plot_bars.jpeg')
