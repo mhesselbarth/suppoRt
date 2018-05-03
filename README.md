@@ -40,7 +40,7 @@ Save.Function.ggplot(plot = result_bars, filename = 'example_plot_bars.jpeg')
 
 ## License
 
-This project is licensed under the GNU3 License - see the [LICENSE](https://github.com/mhesselbarth/UtilityFunctions/blob/master/LICENSE) file for details
+This project is licensed under the GNU3 License - see the [LICENSE](LICENSE) file for details
 
 ## Acknowledgments
 
