@@ -23,7 +23,7 @@ Save.Function.rds <- function(object,  filename = NULL, path = NULL, overwrite =
   }
 
   else{
-    saveRDS(object=object, file=file, ...)
+    saveRDS(object=object, file=complete_file, ...)
     cat("New file written \n")
   }
 }
