@@ -14,7 +14,7 @@ Save.Function.rds <- function(object,  filename = NULL, path = NULL, overwrite =
   complete_file <- file.path(path, filename)
   cat("Trying to save file: ", complete_file, "\n\n")
 
-  if (base::file.exists(file)){
+  if (base::file.exists(complete_file)){
     if(overwrite == TRUE){
       saveRDS(object=object, file=complete_file, ...)
       print("Existing file overwriten \n")
