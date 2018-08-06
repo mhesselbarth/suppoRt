@@ -8,7 +8,7 @@ Author@R: person("Maximilian H.K.", "Hesselbarth",
 Author: Maximilian H.K. Hesselbarth
 Maintainer: Maximilian H.K. Hesselbarth <maximililan.hesselbarth@uni-goettingen.de>
 Description: The package is a growing collection of utility functions.
-License:  GPL-3
+License: GPL-3
 Encoding: UTF-8
 LazyData: true
 Depends: R (>= 3.1.0)
@@ -17,4 +17,4 @@ Imports:
   magrittr,
   spatstat,
   tidyverse
-RoxygenNote: 6.0.1.9000
+RoxygenNote: 6.1.0

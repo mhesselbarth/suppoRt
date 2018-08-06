@@ -19,7 +19,7 @@
 #' deviation from null model
 
 #' @export
-Plot.Envelope <- function(input,
+plot_envelope <- function(input,
                           labels = c('clustering', ' randomness', 'segregation'),
                           title = NULL, xlab = NULL, ylab = NULL,
                           size = 5,
