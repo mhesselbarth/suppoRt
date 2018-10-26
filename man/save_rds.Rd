@@ -2,21 +2,26 @@
 % Please edit documentation in R/save_rds.R
 \name{save_rds}
 \alias{save_rds}
-\title{Function to save rds objects}
+\title{save_rds}
 \usage{
 save_rds(object, filename = NULL, path = NULL, overwrite = FALSE,
   ...)
 }
 \arguments{
-\item{object}{[\code{R object(1)}]\cr R object to serialize}
+\item{object}{R object to serialize}
 
-\item{filename}{[\code{string(1)}]\cr Name of the file where the R object is saved. The file extension must be .rds}
+\item{filename}{Name of the file where the R object is saved. The file extension must be .rds}
 
-\item{path}{[\code{string(1)}]\cr Path to where the R object is saved}
+\item{path}{Path to where the R object is saved}
 
-\item{overwrite}{[\code{logical(1)}]\cr Overwrite if the file alreay exists}
+\item{overwrite}{Overwrite if the file alreay exists}
+
+\item{...}{Options passed to saveRDS}
 }
 \description{
+save_rds
+}
+\details{
 This function checks if the file aready exists before saving it.
 See ?base::saveRDS() for more information
 }

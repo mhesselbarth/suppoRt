@@ -2,21 +2,26 @@
 % Please edit documentation in R/save_ggplot.R
 \name{save_ggplot}
 \alias{save_ggplot}
-\title{Function to save ggplot}
+\title{save_ggplot}
 \usage{
 save_ggplot(plot, filename = NULL, path = NULL, overwrite = FALSE,
   ...)
 }
 \arguments{
-\item{plot}{[\code{ggplot(1)}]\cr Plot to save}
+\item{plot}{Plot to save}
 
-\item{filename}{[\code{string(1)}]\cr File name to create on disk. The device (e.g. jpeg) must be specified as file extension}
+\item{filename}{File name to create on disk. The device (e.g. jpeg) must be specified as file extension}
 
-\item{path}{[\code{string(1)}]\cr Path to save plot to (combined with filename)}
+\item{path}{Path to save plot to (combined with filename)}
 
-\item{overwrite}{[\code{logical(1)}]\cr Overwrite if the plot alreay exists}
+\item{overwrite}{Overwrite if the plot alreay exists}
+
+\item{...}{Options passed to ggsave}
 }
 \description{
+save_ggplot
+}
+\details{
 This function checks if the plot aready exists before saving it.
-See ?ggplot2::ggsave() for more information
+See ?ggplot2::ggsave() for more information.
 }

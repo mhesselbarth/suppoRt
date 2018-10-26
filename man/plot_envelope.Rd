@@ -2,34 +2,36 @@
 % Please edit documentation in R/plot_envelope.R
 \name{plot_envelope}
 \alias{plot_envelope}
-\title{Function to plot simulation envelopes}
+\title{plot_envelope}
 \usage{
 plot_envelope(input, labels = c("clustering", " randomness",
   "segregation"), title = NULL, xlab = NULL, ylab = NULL, size = 5,
   full_fun = T, standarized = F)
 }
 \arguments{
-\item{input}{[\code{envelope(1)}]\cr Envelope object of the spatstat package}
+\item{input}{Envelope object of the spatstat package}
 
-\item{labels}{[\code{string(3)}]\cr Name of the labels
+\item{labels}{Name of the labels
 \cr 1 = obs > hi
 \cr 2 = lo < obs < hi
 \cr 3 = obs < lo}
 
-\item{title}{[\code{string(1)}]\cr Title of the plot}
+\item{title}{Title of the plot}
 
-\item{xlab}{[\code{string(1)}]\cr x label of the plot}
+\item{xlab}{x label of the plot}
 
-\item{ylab}{[\code{string(1)}]\cr y label of the plot}
+\item{ylab}{y label of the plot}
 
-\item{size}{[\code{numeric(1)}]\cr Size of the colour bar}
+\item{size}{Size of the colour bar}
 
-\item{full_fun}{[\code{logical(1)}]\cr Plot full function or only line to indicate}
+\item{full_fun}{Plot full function or only line to indicate}
 
-\item{standarized}{[\code{logical(1)}]\cr If TRUE obs = obs - theo
-deviation from null model}
+\item{standarized}{If TRUE obs = obs - theo deviation from null model}
 }
 \description{
+plot_envelope
+}
+\details{
 This functions provides a plotting style for envelope objects of the spatstat
 package (for more information please see ?spatstat::envelope). The location of the
 observed value in relation to the simulation envelopes of the null model data is
