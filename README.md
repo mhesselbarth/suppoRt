@@ -1,17 +1,5 @@
----
-output: github_document
----
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-
-```{r setup, include = FALSE}
-knitr::opts_chunk$set(
-  collapse = TRUE,
-  comment = "#>",
-  fig.path = "man/figures/README-",
-  out.width = "100%"
-)
-```
 
 ## Overview
 
@@ -19,11 +7,10 @@ knitr::opts_chunk$set(
 
 ## Installation
 
-To install `UtilityFunctions` use 
+To install `UtilityFunctions` use
 
-```{r, include = TRUE, eval = FALSE}
+``` r
 install.packages("devtools") # if devtools is not already isntalled
 
 devtools::install_github("mhesselbarth/UtilityFunctions")
-``` 
-
+```
