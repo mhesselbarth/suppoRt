@@ -8,20 +8,30 @@ save_rds(object, filename = NULL, path = NULL, overwrite = FALSE,
   ...)
 }
 \arguments{
-\item{object}{R object to serialize}
+\item{object}{R object to serialize.}
 
-\item{filename}{Name of the file where the R object is saved. The file extension must be .rds}
+\item{filename}{Name of the file where the R object is saved (file extension must be .rds).}
 
-\item{path}{Path to where the R object is saved}
+\item{path}{Path to where the R object is saved.}
 
-\item{overwrite}{Overwrite if the file alreay exists}
+\item{overwrite}{If true, existing file is overwritten.}
 
-\item{...}{Options passed to saveRDS}
+\item{...}{Options passed to saveRDS.}
 }
 \description{
-save_rds
+Save rds
 }
 \details{
-This function checks if the file aready exists before saving it.
-See ?base::saveRDS() for more information
+This function checks if the file aready exists before saving it. If the file aready
+exists and `overwrite = FALSE` (default), the file is not saved. The filename and path
+is combined using `file.path()`. See `?base::saveRDS()`` for more information
+}
+\examples{
+set.seed(42)
+x <- runif(n = 100)
+save_rds(x, filename = "random_numbers.rds")
+
+}
+\seealso{
+\code{\link{saveRDS}}
 }

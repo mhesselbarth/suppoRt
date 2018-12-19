@@ -2,7 +2,6 @@
 #'
 #' \emph{UtilityFunctions} UtilityFunctions ,,,
 #'
-#' @importFrom stats na.omit runif setNames
 
 # nocov start
 # nolint start

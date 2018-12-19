@@ -8,20 +8,32 @@ save_ggplot(plot, filename = NULL, path = NULL, overwrite = FALSE,
   ...)
 }
 \arguments{
-\item{plot}{Plot to save}
+\item{plot}{Plot to save.}
 
-\item{filename}{File name to create on disk. The device (e.g. jpeg) must be specified as file extension}
+\item{filename}{File name to create on disk. The device (e.g. jpeg) must be specified as file extension.}
 
-\item{path}{Path to save plot to (combined with filename)}
+\item{path}{Path to save plot to (combined with filename).}
 
-\item{overwrite}{Overwrite if the plot alreay exists}
+\item{overwrite}{If true, existing file is overwritten.}
 
-\item{...}{Options passed to ggsave}
+\item{...}{Options passed to ggsave.}
 }
 \description{
-save_ggplot
+Save ggplot
 }
 \details{
-This function checks if the plot aready exists before saving it.
-See ?ggplot2::ggsave() for more information.
+This function checks if the plot aready exists before saving it. If the file aready
+exists and `overwrite = FALSE` (default), the file is not saved. The filename and path
+is combined using `file.path()`. See `?ggplot2::ggsave()` for more information.
+}
+\examples{
+set.seed(42)
+pattern <- spatstat::rThomas(kappa = 50, scale = 0.025, mu = 5)
+csr_envelope <- spatstat::envelope(pattern, fun = spatstat::pcf, nsim = 39)
+result_plot <- quantum_plot(csr_envelope, ylab = "g(r)")
+save_ggplot(result_plot, filename = "result_ggpplot.jpeg")
+
+}
+\seealso{
+\code{\link{ggsave}}
 }

@@ -8,3 +8,15 @@
 \description{
 \emph{UtilityFunctions} UtilityFunctions ,,,
 }
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/mhesselbarth/UtilityFunctions}
+  \item Report bugs at \url{https://github.com/mhesselbarth/UtilityFunctions/issues}
+}
+
+}
+\author{
+\strong{Maintainer}: Maximilian H.K. Hesselbarth \email{maximililan.hesselbarth@uni-goettingen.de} (0000-0003-1125-9918)
+
+}

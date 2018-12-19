@@ -1,0 +1,28 @@
+---
+output: 
+  github_document: 
+    html_preview: false
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+ [![Travis build status](https://travis-ci.org/mhesselbarth/UtilityFunctions.svg?branch=master)](https://travis-ci.org/mhesselbarth/UtilityFunctions)
+
+## Overview
+
+`UtilityFunctions` is a growing collection of various helper functions.
+
+## Installation
+
+To install `UtilityFunctions` use 
+
+```{r, include = TRUE, eval = FALSE}
+install.packages("devtools") # if devtools is not already isntalled
+
+devtools::install_github("mhesselbarth/UtilityFunctions")
+``` 
+

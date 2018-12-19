@@ -1,0 +1,17 @@
+# R for travis: see documentation at https://docs.travis-ci.com/user/languages/r
+
+# Header
+language: r
+sudo: true
+cache: packages
+
+# after_success:
+#  - Rscript -e 'covr::codecov()'
+
+notifications:
+  email:
+  on_success: change
+  on_failure: change
+
+#services
+services
