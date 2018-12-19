@@ -1,6 +1,6 @@
 ^appveyor\.yml$
 ^codecov\.yml$
-^README\.Rmd$
+^README.*$
 ^\.travis\.yml$
 ^docs$
 ^_pkgdown\.yml$
