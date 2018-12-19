@@ -7,7 +7,7 @@
 
 ## Installation
 
-To install `UtilityFunctions` use
+To install `UtilityFunctions` use:
 
 ``` r
 install.packages("devtools") # if devtools is not already isntalled

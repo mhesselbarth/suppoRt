@@ -19,11 +19,10 @@ knitr::opts_chunk$set(
 
 ## Installation
 
-To install `UtilityFunctions` use 
-
+To install `UtilityFunctions` use: 
+  
 ```{r, include = TRUE, eval = FALSE}
 install.packages("devtools") # if devtools is not already isntalled
 
 devtools::install_github("mhesselbarth/UtilityFunctions")
 ``` 
-
