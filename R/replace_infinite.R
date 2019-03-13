@@ -23,7 +23,8 @@
 #' @rdname replace_infinite
 
 #' @export
-replace_infinite <- function(x, what = c("NaN", "Inf"), value = c(NA, NA)) {
+replace_infinite <- function(x, what = c("NaN", "Inf"), value = c(NA, NA),
+                             verbose = TRUE) {
 
   # check if input is vector
   if (!is.vector(x)) {
@@ -37,6 +38,14 @@ replace_infinite <- function(x, what = c("NaN", "Inf"), value = c(NA, NA)) {
 
   # replace NaN and Inf
   if(all(what == c("NaN", "Inf"))) {
+
+    if(length(value) < 2) {
+      if(verbose) {
+        warning("Using 'value' as replace value twice", call. = FALSE)
+      }
+
+      value <- c(value, value)
+    }
 
     x <- dplyr::if_else(is.nan(x), as.numeric(value[[1]]), x)
 
@@ -60,11 +69,13 @@ replace_infinite <- function(x, what = c("NaN", "Inf"), value = c(NA, NA)) {
   # only replace Inf
   else if (what == "Inf") {
 
-    if(length(value) > 1) {
-      warning("Only using first 'value' as replace value", call. = FALSE)
+    if(verbose) {
+      if(length(value) > 1) {
+        warning("Only using first 'value' as replace value", call. = FALSE)
+      }
     }
 
-    x <-dplyr::if_else(is.infinite(x), as.numeric(value[[1]]), x)
+    x <- dplyr::if_else(is.infinite(x), as.numeric(value[[1]]), x)
 
     return(x)
   }
