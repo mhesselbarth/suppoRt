@@ -4,7 +4,8 @@
 \alias{replace_infinite}
 \title{replace_infinite}
 \usage{
-replace_infinite(x, what = c("NaN", "Inf"), value = c(NA, NA))
+replace_infinite(x, what = c("NaN", "Inf"), value = c(NA, NA),
+  verbose = TRUE)
 }
 \arguments{
 \item{x}{vector}
@@ -12,6 +13,8 @@ replace_infinite(x, what = c("NaN", "Inf"), value = c(NA, NA))
 \item{what}{What infinite values should be replaced. See details.}
 
 \item{value}{Value that will be used to replace selected infinite values.}
+
+\item{verbose}{Print warning messages.}
 }
 \value{
 vector

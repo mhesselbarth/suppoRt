@@ -5,6 +5,7 @@
 #' @param x vector
 #' @param what What infinite values should be replaced. See details.
 #' @param value Value that will be used to replace selected infinite values.
+#' @param verbose Print warning messages.
 #'
 #' @details
 #' The function converts all `NaN` and `Inf` values to NA. Input must be a vector.
