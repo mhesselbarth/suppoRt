@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Function reference • helpeR</title>
+<title>replace_infinite — replace_infinite • helpeR</title>
 
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -30,7 +30,10 @@
 
 
 
-<meta property="og:title" content="Function reference" />
+<meta property="og:title" content="replace_infinite — replace_infinite" />
+
+<meta property="og:description" content="Convert `NaN` and `Inf` to `NA` or other value" />
+<meta name="twitter:card" content="summary" />
 
 
 
@@ -47,7 +50,7 @@
   </head>
 
   <body>
-    <div class="container template-reference-index">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -97,66 +100,66 @@
       </header>
 
 <div class="row">
-  <div class="contents col-md-9">
+  <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>Reference</h1>
+    <h1>replace_infinite</h1>
+    <small class="dont-index">Source: <a href='https://github.com/mhesselbarth/helpeR/blob/master/R/replace_infinite.R'><code>R/replace_infinite.R</code></a></small>
+    <div class="hidden name"><code>replace_infinite.Rd</code></div>
     </div>
 
-    <table class="ref-index">
+    <div class="ref-description">
+    
+    <p>Convert `NaN` and `Inf` to `NA` or other value</p>
+    
+    </div>
 
-    <colgroup>
-      
-      <col class="alias" />
-      <col class="title" />
-    </colgroup>
-
-    <tbody>
-      <tr>
-        <th colspan="2">
-          <h2 id="section-all-functions" class="hasAnchor"><a href="#section-all-functions" class="anchor"></a>All functions</h2>
-          <p class="section-desc"></p>
-        </th>
-      </tr>
-      <tr>
-        
-        <td>
-          <p><code><a href="helpeR-package.html">helpeR-package</a></code> </p>
-        </td>
-        <td><p>UtilityFunctions</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="quantum_plot.html">quantum_plot()</a></code> </p>
-        </td>
-        <td><p>quantum_plot</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="replace_infinite.html">replace_infinite()</a></code> </p>
-        </td>
-        <td><p>replace_infinite</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="save_ggplot.html">save_ggplot()</a></code> </p>
-        </td>
-        <td><p>save_ggplot</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="save_rds.html">save_rds()</a></code> </p>
-        </td>
-        <td><p>save_rds</p></td>
-      </tr>
-    </tbody>
+    <pre class="usage"><span class='fu'>replace_infinite</span>(<span class='no'>x</span>, <span class='kw'>what</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"NaN"</span>, <span class='st'>"Inf"</span>), <span class='kw'>value</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='fl'>NA</span>, <span class='fl'>NA</span>))</pre>
+    
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>x</th>
+      <td><p>vector</p></td>
+    </tr>
+    <tr>
+      <th>what</th>
+      <td><p>What infinite values should be replaced. See details.</p></td>
+    </tr>
+    <tr>
+      <th>value</th>
+      <td><p>Value that will be used to replace selected infinite values.</p></td>
+    </tr>
     </table>
-  </div>
+    
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
+    <p>vector</p>
+    
+    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
+
+    <p>The function converts all `NaN` and `Inf` values to NA. Input must be a vector.
+What can be either `what = c("NaN", "Inf")` to replace both `NaN` and `Inf` or just
+one of the two, e.g. `what = "NaN`.</p>
+    
+
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='no'>vec</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='fl'>1</span>, <span class='fl'>2</span>, <span class='fl'>3</span>, <span class='fl'>NA</span>, <span class='fl'>5</span>, <span class='fl'>NaN</span>, <span class='fl'>Inf</span>)
+<span class='fu'>replace_infinite</span>(<span class='no'>vec</span>)</div><div class='output co'>#&gt; [1]  1  2  3 NA  5 NA NA</div><div class='input'><span class='fu'>replace_infinite</span>(<span class='no'>vec</span>, <span class='kw'>what</span> <span class='kw'>=</span> <span class='st'>"NaN"</span>, <span class='kw'>value</span> <span class='kw'>=</span> <span class='fl'>NA</span>)</div><div class='output co'>#&gt; [1]   1   2   3  NA   5  NA Inf</div><div class='input'><span class='fu'>replace_infinite</span>(<span class='no'>vec</span>, <span class='kw'>value</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='fl'>NA</span>, <span class='fl'>0</span>))</div><div class='output co'>#&gt; [1]  1  2  3 NA  5 NA  0</div><div class='input'>
+</div></pre>
+  </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
-      <li><a href="#section-all-functions">All functions</a></li>
+      <li><a href="#arguments">Arguments</a></li>
+      
+      <li><a href="#value">Value</a></li>
+
+      <li><a href="#details">Details</a></li>
+      
+      <li><a href="#examples">Examples</a></li>
     </ul>
+
   </div>
 </div>
 
