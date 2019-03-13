@@ -7,7 +7,7 @@ Authors@R: person("Maximilian H.K.", "Hesselbarth",
                   role = c("aut", "cre"), 
                   comment = c(ORCID = "0000-0003-1125-9918"))
 Maintainer: Maximilian H.K. Hesselbarth <maximililan.hesselbarth@uni-goettingen.de>
-Description: Growing collection of utility functions.
+Description: Growing collection of helper functions.
 License: GPL-3
 URL: https://github.com/mhesselbarth/helpeR
 BugReports: https://github.com/mhesselbarth/helpeR/issues
