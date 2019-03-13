@@ -4,9 +4,9 @@
 \name{helpeR-package}
 \alias{helpeR}
 \alias{helpeR-package}
-\title{UtilityFunctions}
+\title{helpeR}
 \description{
-\emph{UtilityFunctions} UtilityFunctions ,,,
+\emph{helpeR} helpeR ,,,
 }
 \seealso{
 Useful links:

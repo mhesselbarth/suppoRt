@@ -1,6 +1,6 @@
-#' UtilityFunctions
+#' helpeR
 #'
-#' \emph{UtilityFunctions} UtilityFunctions ,,,
+#' \emph{helpeR} helpeR ,,,
 #'
 
 # nocov start
@@ -18,5 +18,3 @@ globalVariables(c(
 
 # nolint end
 # nocov end
-
-

@@ -1,6 +1,6 @@
 Package: helpeR
 Type: Package
-Title: Utility functions
+Title: Helper functions
 Version: 0.1
 Authors@R: person("Maximilian H.K.", "Hesselbarth", 
                   email = "maximililan.hesselbarth@uni-goettingen.de",
