@@ -40,7 +40,7 @@ test_that("quantum_plot creates labels if not provided", {
                                      funargs = list(divisor = "d",
                                                     correction = "Ripley"))
 
-  expect_warning(quantum_plot(csr_envelope, ylab = "g(r)",
+  expect_warning(quantum_plot(csr_envelope,
                               labels = c("clustering", "segregation")),
                   regexp = "Not enough labels provided - using 'clustering', 'randomness' and 'segregation'.")
 })
