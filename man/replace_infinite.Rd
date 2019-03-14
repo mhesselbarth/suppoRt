@@ -8,7 +8,7 @@ replace_infinite(x, what = c("NaN", "Inf"), value = c(NA, NA),
   verbose = TRUE)
 }
 \arguments{
-\item{x}{vector}
+\item{x}{vector.}
 
 \item{what}{What infinite values should be replaced. See details.}
 
