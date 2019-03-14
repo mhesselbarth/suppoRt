@@ -27,10 +27,9 @@ exists and `overwrite = FALSE` (default), the file is not saved. The filename an
 is combined using `file.path()`. See `?ggplot2::ggsave()` for more information.
 }
 \examples{
-set.seed(42)
-pattern <- spatstat::rThomas(kappa = 50, scale = 0.025, mu = 5)
-csr_envelope <- spatstat::envelope(pattern, fun = spatstat::pcf, nsim = 39)
-result_plot <- quantum_plot(csr_envelope, ylab = "g(r)")
+x <- runif(n = 100)
+y <- runif(n = 100)
+result_plot <- ggplot2::ggplot() + ggplot2::geom_point(ggplot2::aes(x = x, y = y))
 save_ggplot(result_plot, filename = "result_ggpplot.jpeg")
 
 }

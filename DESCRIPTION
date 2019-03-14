@@ -16,7 +16,6 @@ Imports:
   dplyr,
   ggplot2, 
   spatstat,
-  tibble
 RoxygenNote: 6.1.1
 Encoding: UTF-8
 LazyData: true
