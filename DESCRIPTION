@@ -1,7 +1,7 @@
 Package: helpeR
 Type: Package
 Title: Helper functions
-Version: 0.1
+Version: 0.2
 Authors@R: person("Maximilian H.K.", "Hesselbarth", 
                   email = "maximililan.hesselbarth@uni-goettingen.de",
                   role = c("aut", "cre"), 
