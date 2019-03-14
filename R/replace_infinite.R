@@ -2,7 +2,7 @@
 #'
 #' @description Convert `NaN` and `Inf` to `NA` or other value
 #'
-#' @param x vector
+#' @param x vector.
 #' @param what What infinite values should be replaced. See details.
 #' @param value Value that will be used to replace selected infinite values.
 #' @param verbose Print warning messages.
@@ -83,7 +83,7 @@ replace_infinite <- function(x, what = c("NaN", "Inf"), value = c(NA, NA),
 
   # return error
   else {
-    stop("'what' must be 'NaN', 'Inf' or 'c(NaN, Inf)'", call. = FALSE)
+    stop("'what' must be 'NaN', 'Inf' or 'c(NaN, Inf)'.", call. = FALSE)
   }
 }
 

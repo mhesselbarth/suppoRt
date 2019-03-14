@@ -49,12 +49,12 @@ quantum_plot <- function(input,
 
   if(!is(input, "envelope") && !is(input, "data.frame")) {
 
-    stop("Please provide envelope object or dataframe", call. = FALSE)
+    stop("Please provide envelope object or dataframe.", call. = FALSE)
   }
 
   if(length(labels) !=  3){
     labels <- c("clustering", "randomness", "segregation")
-    warning("Not enough labels provided - using clustering, randomness and segregation",
+    warning("Not enough labels provided - using 'clustering', 'randomness' and 'segregation'.",
             call. = FALSE)
   }
 
