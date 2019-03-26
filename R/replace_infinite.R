@@ -48,9 +48,9 @@ replace_infinite <- function(x, what = c("NaN", "Inf"), value = c(NA, NA),
       value <- c(value, value)
     }
 
-    x <- dplyr::if_else(is.nan(x), as.numeric(value[[1]]), x)
+    x <- ifelse(test = is.nan(x), yes = as.numeric(value[[1]]), no = x)
 
-    x <- dplyr::if_else(is.infinite(x), as.numeric(value[[2]]), x)
+    x <- ifelse(test = is.infinite(x), yes = as.numeric(value[[2]]), no = x)
 
     return(x)
   }
@@ -62,7 +62,7 @@ replace_infinite <- function(x, what = c("NaN", "Inf"), value = c(NA, NA),
       warning("Only using first 'value' as replace value", call. = FALSE)
     }
 
-    x <- dplyr::if_else(is.nan(x), as.numeric(value[[1]]), x)
+    x <- ifelse(test = is.nan(x), yes = as.numeric(value[[1]]), no = x)
 
     return(x)
   }
@@ -76,7 +76,7 @@ replace_infinite <- function(x, what = c("NaN", "Inf"), value = c(NA, NA),
       }
     }
 
-    x <- dplyr::if_else(is.infinite(x), as.numeric(value[[1]]), x)
+    x <- ifelse(test = is.infinite(x), yes = as.numeric(value[[1]]), no = x)
 
     return(x)
   }
