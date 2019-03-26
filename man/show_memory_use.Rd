@@ -4,7 +4,8 @@
 \alias{show_memory_use}
 \title{show_memory_use}
 \usage{
-show_memory_use(sort = "size", units = "Kb", decreasing = FALSE)
+show_memory_use(sort = "size", units = "Kb", decreasing = TRUE,
+  n = NULL)
 }
 \arguments{
 \item{sort}{Sort the resulting dataframe either by "size", "alphabetical" or "class".}
@@ -12,6 +13,8 @@ show_memory_use(sort = "size", units = "Kb", decreasing = FALSE)
 \item{units}{Unit used to format memory usage. For more details, see \code{?object.size}.}
 
 \item{decreasing}{Logical if results should be sorted in decreasing order.}
+
+\item{n}{Number of top rows to print.}
 }
 \description{
 Show memory use

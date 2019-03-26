@@ -113,7 +113,8 @@
     
     </div>
 
-    <pre class="usage"><span class='fu'>show_memory_use</span>(<span class='kw'>sort</span> <span class='kw'>=</span> <span class='st'>"size"</span>, <span class='kw'>units</span> <span class='kw'>=</span> <span class='st'>"Kb"</span>, <span class='kw'>decreasing</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>)</pre>
+    <pre class="usage"><span class='fu'>show_memory_use</span>(<span class='kw'>sort</span> <span class='kw'>=</span> <span class='st'>"size"</span>, <span class='kw'>units</span> <span class='kw'>=</span> <span class='st'>"Kb"</span>, <span class='kw'>decreasing</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>,
+  <span class='kw'>n</span> <span class='kw'>=</span> <span class='kw'>NULL</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -129,6 +130,10 @@
     <tr>
       <th>decreasing</th>
       <td><p>Logical if results should be sorted in decreasing order.</p></td>
+    </tr>
+    <tr>
+      <th>n</th>
+      <td><p>Number of top rows to print.</p></td>
     </tr>
     </table>
     
@@ -147,7 +152,7 @@ resulting data frame can be sorted by different arguments.</p>
 <span class='no'>df</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/data.frame'>data.frame</a></span>(<span class='fl'>1</span>:<span class='fl'>5000</span>)
 <span class='no'>mat</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/matrix'>matrix</a></span>(<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='fl'>1</span>:<span class='fl'>100</span>), <span class='kw'>ncol</span> <span class='kw'>=</span> <span class='fl'>10</span>)
 
-<span class='fu'>show_memory_use</span>()</div><div class='output co'>#&gt; <span class='error'>Error in get(x): Objekt 'mat' nicht gefunden</span></div><div class='input'>
+<span class='fu'>show_memory_use</span>()</div><div class='output co'>#&gt; <span class='error'>Error in get(x): object 'mat' not found</span></div><div class='input'>
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
