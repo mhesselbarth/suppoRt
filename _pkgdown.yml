@@ -34,7 +34,7 @@ navbar:
       href: news/index.html
     - icon: fa-github fa-lg
       text: "Github"
-      href: https://github.com/r-spatialecology/onpoint
+      href: https://github.com/mhesselbarth/helpeR
     - icon: fa-user
       text: Contact
 hreft: https://mhesselbarth.rbind.io
