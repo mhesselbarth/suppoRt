@@ -1,0 +1,40 @@
+title: helpeR | Helper functions for R
+
+template:
+  params:
+    bootswatch: sandstone
+
+reference:
+  - title: Replace values
+    contents:
+      - all_real
+      - any_real
+      - is_real
+      - replace_infinite
+  - title: Save objects
+    contents:
+      - save_ggplot
+      - save_rds
+  - title: Various
+    contents:
+      - show_memory_use
+
+navbar:
+  title: onpoint
+  left:
+    - icon: fa-home
+      text: "Home"
+      href: index.html
+  right:
+    - icon: fa-gears
+      text: "Functions"
+      href: reference/index.html
+    - icon: fa-newspaper-o
+      text: "News"
+      href: news/index.html
+    - icon: fa-github fa-lg
+      text: "Github"
+      href: https://github.com/r-spatialecology/onpoint
+    - icon: fa-user
+      text: Contact
+hreft: https://mhesselbarth.rbind.io
