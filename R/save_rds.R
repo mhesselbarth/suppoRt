@@ -27,22 +27,28 @@
 #' @export
 save_rds <- function(object, filename = NULL, path = NULL, overwrite = FALSE, ...){
 
-  if(is.null(path)){path <- getwd()}
-  if(is.null(filename)){filename <- 'rds_file.rds'}
+  if(is.null(path)) {path <- getwd()}
+
+  if(is.null(filename)) {filename <- "rds_file.rds"}
 
   complete_file <- file.path(path, filename)
-  cat("Trying to save file: ", complete_file, "\n\n")
 
-  if (base::file.exists(complete_file)){
+  message("> Trying to save file: ", complete_file, appendLF = TRUE)
+
+  if (base::file.exists(complete_file)) {
+
     if(overwrite == TRUE){
+
       saveRDS(object = object, file = complete_file, ...)
-      cat("Existing file overwriten \n")
+
+      message("> Existing file overwriten", appendLF = TRUE)
     }
-    else{cat("File not saved \n")}
+    else{stop("Existing file not overwriten", call. = FALSE)}
   }
 
   else{
     saveRDS(object = object, file = complete_file, ...)
-    cat("New file written \n")
+
+    message("> New file written", appendLF = TRUE)
   }
 }

@@ -28,25 +28,30 @@
 #' @export
 save_ggplot <- function(plot, filename = NULL, path = NULL, overwrite = FALSE, ...) {
 
-  if(is.null(path)){path <- getwd()}
-  if(is.null(filename)){filename <- 'R_plot.jpeg'}
+  if(is.null(path)) {path <- getwd()}
+
+  if(is.null(filename)) {filename <- 'R_plot.jpeg'}
 
   complete_file <- file.path(path, filename)
-  cat(paste0("Trying to save ggplot:\n", complete_file, "\n\n"))
 
-  if (file.exists(complete_file)){
-    if(overwrite == TRUE){
+  message("> Trying to save ggplot: ", complete_file, appendLF = TRUE)
+
+  if (file.exists(complete_file)) {
+
+    if(overwrite == TRUE) {
 
       ggplot2::ggsave(plot = plot, filename = filename, path = path, ...)
-      cat("Existing ggplot overwriten \n")
+
+      message("> Existing ggplot overwriten", appendLF = TRUE)
     }
 
-    else{cat("ggplot not saved \n")}
+    else{stop("Existing ggplot not overwriten")}
   }
 
   else{
 
     ggplot2::ggsave(plot=plot, filename=filename, path=path, ...)
-    cat("New ggplot written \n")
+
+    message("> New ggplot written", appendLF = TRUE)
   }
 }
