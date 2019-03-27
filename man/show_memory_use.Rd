@@ -4,11 +4,13 @@
 \alias{show_memory_use}
 \title{show_memory_use}
 \usage{
-show_memory_use(sort = "size", units = "Kb", decreasing = TRUE,
-  n = NULL)
+show_memory_use(what = NULL, sort = "size", units = "Kb",
+  decreasing = TRUE, n = NULL)
 }
 \arguments{
-\item{sort}{Sort the resulting dataframe either by "size", "alphabetical" or "class".}
+\item{what}{List with objects to show object size. If \code{NULL} all objects in environment are used.}
+
+\item{sort}{Sort the resulting dataframe either by "size", "name".}
 
 \item{units}{Unit used to format memory usage. For more details, see \code{?object.size}.}
 
