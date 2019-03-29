@@ -17,9 +17,11 @@
 #' \code{\link{saveRDS}}
 #
 #' @examples
+#' \dontrun{
 #' set.seed(42)
 #' x <- runif(n = 100)
 #' save_rds(x, filename = "random_numbers.rds")
+#' }
 #'
 #' @aliases save_rds
 #' @rdname save_rds

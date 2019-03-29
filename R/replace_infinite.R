@@ -1,6 +1,6 @@
 #' replace_infinite
 #'
-#' @description Convert `NaN` and `Inf` to `NA` or other value
+#' @description Replace infinite
 #'
 #' @param x vector.
 #' @param what What infinite values should be replaced. See details.

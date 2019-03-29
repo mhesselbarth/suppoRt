@@ -1,6 +1,6 @@
 #' is_real
 #'
-#' @description Checks if vector includes real numbers, i.e. not `NaN` or `Inf`.
+#' @description Is real
 #'
 #' @param x vector.
 #' @param include_na Logical if `NA` should also be considered as non-real.

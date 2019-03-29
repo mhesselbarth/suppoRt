@@ -27,9 +27,11 @@ exists and `overwrite = FALSE` (default), the file is not saved. The filename an
 is combined using `file.path()`. See `?base::saveRDS()`` for more information
 }
 \examples{
+\dontrun{
 set.seed(42)
 x <- runif(n = 100)
 save_rds(x, filename = "random_numbers.rds")
+}
 
 }
 \seealso{

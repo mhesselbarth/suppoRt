@@ -20,7 +20,7 @@ replace_infinite(x, what = c("NaN", "Inf"), value = c(NA, NA),
 vector
 }
 \description{
-Convert `NaN` and `Inf` to `NA` or other value
+Replace infinite
 }
 \details{
 The function converts all `NaN` and `Inf` values to NA. Input must be a vector.

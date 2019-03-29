@@ -17,7 +17,7 @@ is_real(x, include_na = FALSE, verbose = TRUE)
 vector
 }
 \description{
-Checks if vector includes real numbers, i.e. not `NaN` or `Inf`.
+Is real
 }
 \details{
 The function checks if a vector contains real numbers and returns `FALSE` for

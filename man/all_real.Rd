@@ -17,7 +17,7 @@ all_real(x, include_na = FALSE, verbose = TRUE)
 vector
 }
 \description{
-Checks if vector includes only real numbers, no i.e. `NaN` or `Inf`.
+All real
 }
 \details{
 The function checks if a vector contains `NaN` or `Inf` values. Input must be a vector.

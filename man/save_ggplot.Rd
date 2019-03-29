@@ -27,10 +27,12 @@ exists and `overwrite = FALSE` (default), the file is not saved. The filename an
 is combined using `file.path()`. See `?ggplot2::ggsave()` for more information.
 }
 \examples{
+\dontrun{
 x <- runif(n = 100)
 y <- runif(n = 100)
 result_plot <- ggplot2::ggplot() + ggplot2::geom_point(ggplot2::aes(x = x, y = y))
 save_ggplot(result_plot, filename = "result_ggpplot.jpeg")
+}
 
 }
 \seealso{
