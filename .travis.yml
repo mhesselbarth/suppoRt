@@ -14,11 +14,6 @@ after_success:
 
 notifications:
   email:
-  on_success: change
-  on_failure: change
-
-notifications:
-  email:
     recipients:
       - maximilian.hesselbarth@uni-goettingen.de
     on_success: change # default: change
