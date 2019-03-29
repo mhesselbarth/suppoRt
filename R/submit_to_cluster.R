@@ -8,7 +8,7 @@
 #' Wrapper around the function \code{Q()} of the *clustermq* package. The submitting and
 #' finishing time are printed
 #'
-#' #' @seealso
+#' @seealso
 #' \code{\link{Q}}
 #'
 #' @return list

@@ -18,9 +18,6 @@ Submit to cluster
 \details{
 Wrapper around the function \code{Q()} of the *clustermq* package. The submitting and
 finishing time are printed
-
-#' @seealso
-\code{\link{Q}}
 }
 \examples{
 fx = function(x) x * 2
@@ -28,4 +25,7 @@ submit_to_cluster(fx, x = 1:3, n_jobs = 1)
 list(2,4,6)
 
 
+}
+\seealso{
+\code{\link{Q}}
 }
