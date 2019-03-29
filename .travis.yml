@@ -4,6 +4,9 @@ language: R
 sudo: false
 cache: packages
 
+before_install:
+- apt-get install libzmq3-dev
+
 r_packages:
   - covr
 
