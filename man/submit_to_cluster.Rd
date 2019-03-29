@@ -23,10 +23,9 @@ finishing time are printed
 \code{\link{Q}}
 }
 \examples{
-\dontrun{
 fx = function(x) x * 2
-Q(fx, x=1:3, n_jobs=1)
+submit_to_cluster(fx, x = 1:3, n_jobs = 1)
 list(2,4,6)
-}
+
 
 }
