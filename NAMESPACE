@@ -3,6 +3,7 @@
 export(all_real)
 export(any_real)
 export(is_real)
+export(load_packages)
 export(replace_infinite)
 export(save_ggplot)
 export(save_rds)
