@@ -15,7 +15,8 @@ Depends: R (>= 3.1)
 Imports: 
   clustermq,
   ggplot2,
-  utils
+  utils,
+  tools
 Suggests: 
     covr,
     testthat
