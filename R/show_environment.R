@@ -1,4 +1,4 @@
-#' show_memory_use
+#' show_environment
 #'
 #' @description Show memory use
 #'
@@ -17,26 +17,28 @@
 #
 #' @examples
 #' vec <- 1:100
+#' vec_2 <- runif(n = 10)
 #' df <- data.frame(1:5000)
-#' mat <- matrix(c(1:100), ncol = 10)
+#' mat <- matrix(c(1:100), ncol = 20, nrow = 5)
+#' list <- list(x = vec, y = df, z = mat)
 #'
-#' show_memory_use()
+#' show_environment()
 #'
-#' @aliases show_memory_use
-#' @rdname show_memory_use
+#' @aliases show_environment
+#' @rdname show_environment
 
 #' @export
-show_memory_use <- function(what = NULL, sort = "size", units = "Kb", decreasing = TRUE, n = NULL) {
+show_environment <- function(what = NULL, sort = "size", units = "Kb", decreasing = TRUE, n = NULL) {
 
 
-  if(is.null(what)) {
+  if (is.null(what)) {
     present_objects <- ls(parent.frame()) # get all present objects in environment
 
     what <- lapply(present_objects, function(x) get(x))
   }
 
   else {
-    if(!is.null(names(what))) {
+    if (!is.null(names(what))) {
       present_objects <- names(what)
     }
 
@@ -51,7 +53,7 @@ show_memory_use <- function(what = NULL, sort = "size", units = "Kb", decreasing
   }
 
   # get memory usage and class
-  memory_usage <- lapply(what, function(x) {
+  information_objects <- lapply(what, function(x) {
 
     # get current size and split into numeric and unit
     current_size <- format(utils::object.size(x), units = units)
@@ -60,38 +62,66 @@ show_memory_use <- function(what = NULL, sort = "size", units = "Kb", decreasing
     # get class of object
     current_class <- class(x)[[1]]
 
+    if (is.vector(x) & !is.list(x)) {
+      length <- length(x)
+      dimension <- c(NA, NA)
+    }
+
+    else if (is.data.frame(x) | is.matrix(x)) {
+      length <- NA
+      dimension <- dim(x)
+    }
+
+    else if (is.list(x)) {
+      length <- length(x)
+      dimension <- c(NA, NA)
+    }
+
+    else {
+      length <- NA
+      dimension <- c(NA, NA)
+    }
+
     # combine to one df
     data.frame(class = as.character(current_class),
                size = as.numeric(current_size[[1]]),
-               unit = current_size[[2]])
+               unit = current_size[[2]],
+               length = length,
+               nrow = dimension[[1]],
+               ncol = dimension[[2]])
   })
 
-  names(memory_usage) <- present_objects
+  names(information_objects) <- present_objects
 
   # rowbind to one df and add names
-  memory_usage <- do.call(rbind, memory_usage)
+  information_objects <- do.call(rbind, information_objects)
 
-  row.names(memory_usage) <- NULL
+  row.names(information_objects) <- NULL
 
-  memory_usage <- cbind(name = present_objects, memory_usage)
+  information_objects <- cbind(name = present_objects, information_objects)
 
   # sort data
   if (sort == "name") {
-    memory_usage <- memory_usage[order(memory_usage$name, decreasing = decreasing), ]
+    information_objects <- information_objects[order(information_objects$name, decreasing = decreasing), ]
   }
 
   else {
-    memory_usage <- memory_usage[order(memory_usage$size, decreasing = decreasing), ]
+    information_objects <- information_objects[order(information_objects$size, decreasing = decreasing), ]
 
-    if(sort != "size") {warning("sort argument unkown - using size",
+    if (sort != "size") {warning("sort argument unkown - using size",
                                 call. = FALSE)
     }
   }
 
   # only print top n rows
-  if(!is.null(n)) {
-    memory_usage <- memory_usage[1:n, ]
+  if (!is.null(n)) {
+    information_objects <- information_objects[1:n, ]
   }
 
-  return(memory_usage)
+  # return as tibble if installed
+  if (nzchar(system.file(package = "tibble"))) {
+    information_objects <- tibble::as_tibble(information_objects)
+  }
+
+  return(information_objects)
 }

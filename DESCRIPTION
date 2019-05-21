@@ -1,7 +1,7 @@
 Package: helpeR
 Type: Package
 Title: Collection of utility functions
-Version: 0.2
+Version: 0.3
 Authors@R: person("Maximilian H.K.", "Hesselbarth", 
                   email = "maximililan.hesselbarth@uni-goettingen.de",
                   role = c("aut", "cre"), 
@@ -19,7 +19,8 @@ Imports:
   tools
 Suggests: 
     covr,
-    testthat
+    testthat, 
+    tibble
 RoxygenNote: 6.1.1
 Encoding: UTF-8
 LazyData: true
