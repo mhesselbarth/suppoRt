@@ -2,6 +2,7 @@
 
 export(all_real)
 export(any_real)
+export(expand_grid_unique)
 export(is_real)
 export(load_packages)
 export(replace_infinite)
