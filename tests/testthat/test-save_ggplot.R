@@ -24,7 +24,7 @@ test_that("save_ggplot works does not overwrite a existing file ", {
               path = test_path(),
               filename = "gg_example.png")
 
-  expect_error(save_ggplot(plot = gg_example,
+  expect_warning(save_ggplot(plot = gg_example,
                            filename = "gg_example.png",
                            path = test_path(),
                            overwrite = FALSE),

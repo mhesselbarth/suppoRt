@@ -29,9 +29,9 @@
 #' @export
 save_rds <- function(object, filename = NULL, path = NULL, overwrite = FALSE, ...){
 
-  if(is.null(path)) {path <- getwd()}
+  if (is.null(path)) {path <- getwd()}
 
-  if(is.null(filename)) {filename <- "rds_file.rds"}
+  if (is.null(filename)) {filename <- "rds_file.rds"}
 
   complete_file <- file.path(path, filename)
 
@@ -39,13 +39,17 @@ save_rds <- function(object, filename = NULL, path = NULL, overwrite = FALSE, ..
 
   if (base::file.exists(complete_file)) {
 
-    if(overwrite == TRUE){
+    if (overwrite == TRUE) {
 
       saveRDS(object = object, file = complete_file, ...)
 
       message("> Existing file overwriten", appendLF = TRUE)
     }
-    else{stop("Existing file not overwriten", call. = FALSE)}
+
+    else{
+
+      warning("Existing file not overwriten", call. = FALSE)
+      }
   }
 
   else{

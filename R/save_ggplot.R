@@ -30,9 +30,9 @@
 #' @export
 save_ggplot <- function(plot, filename = NULL, path = NULL, overwrite = FALSE, ...) {
 
-  if(is.null(path)) {path <- getwd()}
+  if (is.null(path)) {path <- getwd()}
 
-  if(is.null(filename)) {filename <- 'R_plot.jpeg'}
+  if (is.null(filename)) {filename <- 'R_plot.jpeg'}
 
   complete_file <- file.path(path, filename)
 
@@ -40,19 +40,22 @@ save_ggplot <- function(plot, filename = NULL, path = NULL, overwrite = FALSE, .
 
   if (file.exists(complete_file)) {
 
-    if(overwrite == TRUE) {
+    if (overwrite == TRUE) {
 
       ggplot2::ggsave(plot = plot, filename = filename, path = path, ...)
 
       message("> Existing ggplot overwriten", appendLF = TRUE)
     }
 
-    else{stop("Existing ggplot not overwriten")}
+    else{
+
+      warning("Existing ggplot not overwriten", call. = FALSE)
+      }
   }
 
   else{
 
-    ggplot2::ggsave(plot=plot, filename=filename, path=path, ...)
+    ggplot2::ggsave(plot = plot, filename = filename, path = path, ...)
 
     message("> New ggplot written", appendLF = TRUE)
   }

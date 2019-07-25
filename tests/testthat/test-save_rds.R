@@ -21,7 +21,7 @@ test_that("save_rds works does not overwrite a existing file ", {
            path = test_path(),
            filename = "test_vector.rds")
 
-  expect_error(save_rds(object = vec,
+  expect_warning(save_rds(object = vec,
                         filename = "test_vector.rds",
                         path = test_path(),
                         overwrite = FALSE),
