@@ -7,7 +7,6 @@
 #' installed packages are loaded. If "ask", an user input is needed.
 #' @param verbose Print messages
 #'
-#'
 #' @details
 #' The function loads libraries. It's possible to provide a vector with string.
 #' Missing packages can be installed automatically
