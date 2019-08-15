@@ -5,7 +5,7 @@
 \title{save_ggplot}
 \usage{
 save_ggplot(plot, filename = NULL, path = NULL, overwrite = FALSE,
-  ...)
+  rm_plot = FALSE, ...)
 }
 \arguments{
 \item{plot}{Plot to save.}
@@ -15,6 +15,8 @@ save_ggplot(plot, filename = NULL, path = NULL, overwrite = FALSE,
 \item{path}{Path to save plot to (combined with filename).}
 
 \item{overwrite}{If true, existing file is overwritten.}
+
+\item{rm_plot}{If true, the plot is removed form the environment.}
 
 \item{...}{Options passed to ggsave.}
 }

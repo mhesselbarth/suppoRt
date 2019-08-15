@@ -6,6 +6,8 @@
 #' @param filename File name to create on disk. The device (e.g. jpeg) must be specified as file extension.
 #' @param path Path to save plot to (combined with filename).
 #' @param overwrite If true, existing file is overwritten.
+#' @param rm_plot If true, the plot is removed form the environment.
+
 #' @param ... Options passed to ggsave.
 #'
 #' @details
@@ -28,7 +30,8 @@
 #' @rdname save_ggplot
 
 #' @export
-save_ggplot <- function(plot, filename = NULL, path = NULL, overwrite = FALSE, ...) {
+save_ggplot <- function(plot, filename = NULL, path = NULL,
+                        overwrite = FALSE, rm_plot = FALSE, ...) {
 
   if (is.null(path)) {path <- getwd()}
 
@@ -58,5 +61,11 @@ save_ggplot <- function(plot, filename = NULL, path = NULL, overwrite = FALSE, .
     ggplot2::ggsave(plot = plot, filename = filename, path = path, ...)
 
     message("> New ggplot written", appendLF = TRUE)
+  }
+
+  if (rm_plot) {
+
+    # remove plot from environment
+    rm(plot)
   }
 }

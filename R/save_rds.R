@@ -6,6 +6,7 @@
 #' @param filename Name of the file where the R object is saved (file extension must be .rds).
 #' @param path Path to where the R object is saved.
 #' @param overwrite If true, existing file is overwritten.
+#' @param rm_object If true, the object is removed form the environment.
 #' @param ... Options passed to saveRDS.
 #'
 #' @details
@@ -27,7 +28,8 @@
 #' @rdname save_rds
 
 #' @export
-save_rds <- function(object, filename = NULL, path = NULL, overwrite = FALSE, ...){
+save_rds <- function(object, filename = NULL, path = NULL,
+                     overwrite = FALSE, rm_object = FALSE, ...){
 
   if (is.null(path)) {path <- getwd()}
 
@@ -56,5 +58,11 @@ save_rds <- function(object, filename = NULL, path = NULL, overwrite = FALSE, ..
     saveRDS(object = object, file = complete_file, ...)
 
     message("> New file written", appendLF = TRUE)
+  }
+
+  if (rm_object) {
+
+    # remove object from environment
+    rm(object)
   }
 }

@@ -5,7 +5,7 @@
 \title{save_rds}
 \usage{
 save_rds(object, filename = NULL, path = NULL, overwrite = FALSE,
-  ...)
+  rm_object = FALSE, ...)
 }
 \arguments{
 \item{object}{R object to serialize.}
@@ -15,6 +15,8 @@ save_rds(object, filename = NULL, path = NULL, overwrite = FALSE,
 \item{path}{Path to where the R object is saved.}
 
 \item{overwrite}{If true, existing file is overwritten.}
+
+\item{rm_object}{If true, the object is removed form the environment.}
 
 \item{...}{Options passed to saveRDS.}
 }
