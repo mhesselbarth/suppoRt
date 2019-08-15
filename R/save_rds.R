@@ -31,6 +31,8 @@
 save_rds <- function(object, filename = NULL, path = NULL,
                      overwrite = FALSE, rm_object = FALSE, ...){
 
+  # object_name <- deparse(substitute(object))
+
   if (is.null(path)) {path <- getwd()}
 
   if (is.null(filename)) {filename <- "rds_file.rds"}
@@ -47,11 +49,11 @@ save_rds <- function(object, filename = NULL, path = NULL,
 
       message("> Existing file overwriten", appendLF = TRUE)
 
-      if (rm_object) {
-
-        # remove object from environment
-        rm(object)
-      }
+      # if (rm_object) {
+      #
+      #   # remove object from environment
+      #   remove(object_name, inherits = TRUE, envir = globalenv())
+      # }
     }
 
     else{
@@ -65,10 +67,10 @@ save_rds <- function(object, filename = NULL, path = NULL,
 
     message("> New file written", appendLF = TRUE)
 
-    if (rm_object) {
-
-      # remove object from environment
-      rm(object)
-    }
+    # if (rm_object) {
+    #
+    #   # remove object from environment
+    #   remove(object_name, inherits = TRUE, envir = globalenv())
+    # }
   }
 }

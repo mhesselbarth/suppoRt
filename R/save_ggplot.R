@@ -33,6 +33,8 @@
 save_ggplot <- function(plot, filename = NULL, path = NULL,
                         overwrite = FALSE, rm_plot = FALSE, ...) {
 
+  # plot_name <- deparse(substitute(object))
+
   if (is.null(path)) {path <- getwd()}
 
   if (is.null(filename)) {filename <- 'R_plot.jpeg'}
@@ -49,11 +51,11 @@ save_ggplot <- function(plot, filename = NULL, path = NULL,
 
       message("> Existing ggplot overwriten", appendLF = TRUE)
 
-      if (rm_plot) {
-
-        # remove plot from environment
-        rm(plot)
-      }
+      # if (rm_plot) {
+      #
+      #   # remove plot from environment
+      #   remove(plot_name, envir = globalenv())
+      # }
     }
 
     else{
@@ -68,10 +70,10 @@ save_ggplot <- function(plot, filename = NULL, path = NULL,
 
     message("> New ggplot written", appendLF = TRUE)
 
-    if (rm_plot) {
-
-      # remove plot from environment
-      rm(plot)
-    }
+    # if (rm_plot) {
+    #
+    #   # remove plot from environment
+    #   remove(plot_name, envir = globalenv())
+    # }
   }
 }
