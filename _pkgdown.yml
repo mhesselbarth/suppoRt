@@ -9,6 +9,7 @@ reference:
     contents:
       - all_real
       - any_real
+      - expand_grid_unique
       - is_real
       - replace_infinite
   - title: Save objects
@@ -17,10 +18,11 @@ reference:
       - save_rds
   - title: Various
     contents:
-      - show_memory_use
+      - show_environment
+      - submit_to_cluster
 
 navbar:
-  title: onpoint
+  title: helpeR
   left:
     - icon: fa-home
       text: "Home"
