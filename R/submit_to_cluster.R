@@ -14,9 +14,10 @@
 #' @return list
 #'
 #' @examples
+#' \dontrun{
 #' fx = function(x) x * 2
 #' submit_to_cluster(fx, x = 1:3, n_jobs = 1)
-#' list(2,4,6)
+#' }
 #'
 #'
 #' @aliases submit_to_cluster
