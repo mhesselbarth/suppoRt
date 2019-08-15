@@ -48,6 +48,12 @@ save_ggplot <- function(plot, filename = NULL, path = NULL,
       ggplot2::ggsave(plot = plot, filename = filename, path = path, ...)
 
       message("> Existing ggplot overwriten", appendLF = TRUE)
+
+      if (rm_plot) {
+
+        # remove plot from environment
+        rm(plot)
+      }
     }
 
     else{
@@ -61,11 +67,11 @@ save_ggplot <- function(plot, filename = NULL, path = NULL,
     ggplot2::ggsave(plot = plot, filename = filename, path = path, ...)
 
     message("> New ggplot written", appendLF = TRUE)
-  }
 
-  if (rm_plot) {
+    if (rm_plot) {
 
-    # remove plot from environment
-    rm(plot)
+      # remove plot from environment
+      rm(plot)
+    }
   }
 }

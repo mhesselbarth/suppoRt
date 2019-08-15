@@ -46,6 +46,12 @@ save_rds <- function(object, filename = NULL, path = NULL,
       saveRDS(object = object, file = complete_file, ...)
 
       message("> Existing file overwriten", appendLF = TRUE)
+
+      if (rm_object) {
+
+        # remove object from environment
+        rm(object)
+      }
     }
 
     else{
@@ -58,11 +64,11 @@ save_rds <- function(object, filename = NULL, path = NULL,
     saveRDS(object = object, file = complete_file, ...)
 
     message("> New file written", appendLF = TRUE)
-  }
 
-  if (rm_object) {
+    if (rm_object) {
 
-    # remove object from environment
-    rm(object)
+      # remove object from environment
+      rm(object)
+    }
   }
 }
