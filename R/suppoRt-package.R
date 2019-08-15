@@ -1,6 +1,6 @@
-#' helpeR
+#' suppoRt
 #'
-#' \emph{helpeR} helpeR ,,,
+#' \emph{suppoRt} suppoRt ,,,
 #'
 
 # nocov start

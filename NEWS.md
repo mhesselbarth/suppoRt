@@ -1,3 +1,6 @@
+# suppoRt 0.4
+	* Rename to suppoRt
+	
 # helpeR 0.3
   * `save_rds` and `save_ggplot` only throw an warning
 

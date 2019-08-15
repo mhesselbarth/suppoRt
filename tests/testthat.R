@@ -1,5 +1,5 @@
 library(testthat)
 library(ggplot2)
-library(helpeR)
+library(suppoRt)
 
-test_check("helpeR")
+test_check("suppoRt")

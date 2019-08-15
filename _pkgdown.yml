@@ -1,4 +1,4 @@
-title: helpeR | Helper functions for R
+title: suppoRt | Helper functions for R
 
 template:
   params:
@@ -22,7 +22,7 @@ reference:
       - submit_to_cluster
 
 navbar:
-  title: helpeR
+  title: suppoRt
   left:
     - icon: fa-home
       text: "Home"
@@ -36,7 +36,7 @@ navbar:
       href: news/index.html
     - icon: fa-github fa-lg
       text: "Github"
-      href: https://github.com/mhesselbarth/helpeR
+      href: https://github.com/mhesselbarth/suppoRt
     - icon: fa-user
       text: Contact
       hreft: https://mhesselbarth.rbind.io
