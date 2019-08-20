@@ -4,7 +4,7 @@
 \alias{show_environment}
 \title{show_environment}
 \usage{
-show_environment(what = NULL, sort = "size", units = "Kb",
+show_environment(what = NULL, sort = "size", units = "Mb",
   decreasing = TRUE, n = NULL)
 }
 \arguments{

@@ -28,7 +28,7 @@
 #' @rdname show_environment
 
 #' @export
-show_environment <- function(what = NULL, sort = "size", units = "Kb", decreasing = TRUE, n = NULL) {
+show_environment <- function(what = NULL, sort = "size", units = "Mb", decreasing = TRUE, n = NULL) {
 
 
   if (is.null(what)) {
