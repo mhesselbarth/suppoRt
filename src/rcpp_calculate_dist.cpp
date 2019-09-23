@@ -1,16 +1,23 @@
 #include <Rcpp.h>
 using namespace Rcpp;
 
-// This is a simple example of exporting a C++ function to R. You can
-// source this function into an R session using the Rcpp::sourceCpp
-// function (or via the Source button on the editor toolbar). Learn
-// more about Rcpp at:
-//
-//   http://www.rcpp.org/
-//   http://adv-r.had.co.nz/Rcpp.html
-//   http://gallery.rcpp.org/
-//
-
+//' rcpp_calculate_dist
+//'
+//' @description Calculate sum of distances to neighbours
+//'
+//' @param x Matrix with x and y coordinates
+//' @param max_dist Maximum distance to consider
+//'
+//' @details
+//' \code{Rcpp} implementation
+//'
+//' @seealso
+//' \code{\link{dist}}
+//'
+//' @return vector
+//'
+//' @name rcpp_calculate_dist
+//' @export
 // [[Rcpp::export]]
 NumericVector rcpp_calculate_dist(NumericMatrix matrix,
                                   int max_dist) {
