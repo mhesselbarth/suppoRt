@@ -1,10 +1,13 @@
-#' suppoRt
+#' @title suppoRt
 #'
-#' \emph{suppoRt} suppoRt ,,,
-#'
+#' @description
+#' Collection of helper functions
 
+#' @name suppoRt
+#' @docType package
+#' @useDynLib suppoRt
+#' @importFrom Rcpp sourceCpp
 # nocov start
-# nolint start
 "_PACKAGE"
 
 globalVariables(c(
@@ -16,5 +19,4 @@ globalVariables(c(
   "theo",
   "type"))
 
-# nolint end
 # nocov end

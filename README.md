@@ -4,7 +4,7 @@
 [![Travis build
 status](https://travis-ci.org/mhesselbarth/suppoRt.svg?branch=master)](https://travis-ci.org/mhesselbarth/suppoRt)
 [![AppVeyor build
-status](https://ci.appveyor.com/api/projects/status/4cb27ru465yigwl6/branch/master?svg=true)](https://ci.appveyor.com/project/mhesselbarth/suppoRt/branch/master)
+status](https://ci.appveyor.com/api/projects/status/3d92c0rnwapstebm/branch/master?svg=true)](https://ci.appveyor.com/project/mhesselbarth/support/branch/master)
 [![Coverage
 status](https://codecov.io/gh/mhesselbarth/suppoRt/branch/master/graph/badge.svg)](https://codecov.io/gh/mhesselbarth/suppoRt)
 [![Project Status: Active – The project has reached a stable, usable
