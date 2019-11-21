@@ -5,7 +5,7 @@ using namespace Rcpp;
 //'
 //' @description Calculate sum of distances to neighbours
 //'
-//' @param x Matrix with x and y coordinates
+//' @param matrix Matrix with x and y coordinates
 //' @param max_dist Maximum distance to consider
 //'
 //' @details

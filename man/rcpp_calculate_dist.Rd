@@ -7,9 +7,9 @@
 rcpp_calculate_dist(matrix, max_dist)
 }
 \arguments{
-\item{max_dist}{Maximum distance to consider}
+\item{matrix}{Matrix with x and y coordinates}
 
-\item{x}{Matrix with x and y coordinates}
+\item{max_dist}{Maximum distance to consider}
 }
 \value{
 vector

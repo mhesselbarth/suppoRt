@@ -1,3 +1,6 @@
+# suppoRt 0.4.1
+	* New function `split_at()`
+
 # suppoRt 0.4
 	* Rename to suppoRt
 	
