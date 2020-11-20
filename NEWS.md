@@ -1,3 +1,6 @@
+# suppoRt 0.4.2
+* use GitHub actions
+
 # suppoRt 0.4.1
 	* New function `split_at()`
 
