@@ -32,7 +32,7 @@ knitr::opts_chunk$set(
 To install `suppoRt` use: 
   
 ```{r, include = TRUE, eval = FALSE}
-install.packages("devtools") # if devtools is not already installed
+install.packages("remotes") # if devtools is not already installed
 
-devtools::install_github("mhesselbarth/suppoRt")
+remotes::install_github("mhesselbarth/suppoRt")
 ```
