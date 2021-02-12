@@ -22,7 +22,7 @@ Suggests:
     covr,
     testthat,
     tibble
-RoxygenNote: 6.1.1
+RoxygenNote: 7.1.1
 Encoding: UTF-8
 LazyData: true
 LinkingTo: 

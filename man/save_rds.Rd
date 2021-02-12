@@ -4,8 +4,14 @@
 \alias{save_rds}
 \title{save_rds}
 \usage{
-save_rds(object, filename = NULL, path = NULL, overwrite = FALSE,
-  rm_object = FALSE, ...)
+save_rds(
+  object,
+  filename = NULL,
+  path = NULL,
+  overwrite = FALSE,
+  rm_object = FALSE,
+  ...
+)
 }
 \arguments{
 \item{object}{R object to serialize.}

@@ -4,8 +4,7 @@
 \alias{replace_infinite}
 \title{replace_infinite}
 \usage{
-replace_infinite(x, what = c("NaN", "Inf"), value = c(NA, NA),
-  verbose = TRUE)
+replace_infinite(x, what = c("NaN", "Inf"), value = c(NA, NA), verbose = TRUE)
 }
 \arguments{
 \item{x}{vector.}

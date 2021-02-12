@@ -4,8 +4,14 @@
 \alias{save_ggplot}
 \title{save_ggplot}
 \usage{
-save_ggplot(plot, filename = NULL, path = NULL, overwrite = FALSE,
-  rm_plot = FALSE, ...)
+save_ggplot(
+  plot,
+  filename = NULL,
+  path = NULL,
+  overwrite = FALSE,
+  rm_plot = FALSE,
+  ...
+)
 }
 \arguments{
 \item{plot}{Plot to save.}

@@ -4,8 +4,13 @@
 \alias{show_environment}
 \title{show_environment}
 \usage{
-show_environment(what = NULL, sort = "size", units = "Mb",
-  decreasing = TRUE, n = NULL)
+show_environment(
+  what = NULL,
+  sort = "size",
+  units = "Mb",
+  decreasing = TRUE,
+  n = NULL
+)
 }
 \arguments{
 \item{what}{List with objects to show object size. If \code{NULL} all objects in environment are used.}
