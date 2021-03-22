@@ -2,6 +2,7 @@
 
 export(all_real)
 export(any_real)
+export(calc_cv)
 export(expand_grid_unique)
 export(is_real)
 export(rcpp_calculate_dist)
