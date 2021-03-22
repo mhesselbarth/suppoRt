@@ -9,9 +9,12 @@ reference:
     contents:
       - all_real
       - any_real
+      - as_data_table
+      - calc_cv
       - expand_grid_unique
       - is_real
       - replace_infinite
+      - split_at
   - title: Save objects
     contents:
       - save_ggplot

@@ -9,7 +9,7 @@ calc_cv(x, na.rm = FALSE)
 \arguments{
 \item{x}{vector.}
 
-\item{na.rm}{Logical if `NA` should also be removed}
+\item{na.rm}{Logical if `NA` should also removed}
 }
 \value{
 numeric

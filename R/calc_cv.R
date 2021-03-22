@@ -3,7 +3,7 @@
 #' @description Calculate coefficient of variation.
 #'
 #' @param x vector.
-#' @param na.rm Logical if `NA` should also be removed
+#' @param na.rm Logical if `NA` should also removed
 #'
 #' @details
 #' Function to calculate coefficient of variation cv = sd / mean * 100 of vector.
@@ -18,12 +18,11 @@
 #' @rdname calc_cv
 
 #' @export
-
 calc_cv <- function(x, na.rm = FALSE) {
 
   m <- mean(x, na.rm = na.rm)
 
-  s <- sd(x, na.rm = na.rm)
+  s <- stats::sd(x, na.rm = na.rm)
 
   cv <- (s / m) * 100
 

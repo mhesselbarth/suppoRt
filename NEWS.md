@@ -1,5 +1,9 @@
+# suppoRt 0.5
+  * New function `calc_cv()`
+  * New function `as_data_table()`
+
 # suppoRt 0.4.2
-* use GitHub actions
+  * use GitHub actions
 
 # suppoRt 0.4.1
 	* New function `split_at()`
