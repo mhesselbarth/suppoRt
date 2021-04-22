@@ -23,6 +23,7 @@ reference:
     contents:
       - show_environment
       - submit_to_cluster
+      - setup_project
 
 navbar:
   title: suppoRt
