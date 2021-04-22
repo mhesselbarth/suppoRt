@@ -27,6 +27,6 @@ Setup project
 Create project folder with certain structure
 }
 \examples{
-setup_project(name = "Analysis_project", path = "~/Desktop")
+\dontrun{setup_project(name = "Analysis_project", path = "~/Desktop")}
 
 }

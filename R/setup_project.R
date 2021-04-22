@@ -14,7 +14,7 @@
 #' @return void
 #'
 #' @examples
-#' setup_project(name = "Analysis_project", path = "~/Desktop")
+#' \dontrun{setup_project(name = "Analysis_project", path = "~/Desktop")}
 #'
 #' @aliases setup_project
 #' @rdname setup_project
