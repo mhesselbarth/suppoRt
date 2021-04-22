@@ -36,15 +36,13 @@ setup_project <- function(name, path = NULL, folders = NULL, git = TRUE, readme 
 
     sapply(file.path(path_complete, folders), function(x) dir.create(x))
 
-    message("> No folder structure supplied. Using: ", paste(folders, collapse = " "))
-
   } else {
 
     sapply(file.path(path_complete, folders), function(x) dir.create(x))
 
-    message("> Using supplied folders structure: ", paste(folders, collapse = " "))
-
   }
+
+  message("> Setting up following folders: ", paste(folders, collapse = ", "))
 
   defaults <- c("Version: 1.0", "", "RestoreWorkspace: Default", "SaveWorkspace: Default",
                 "AlwaysSaveHistory: Default", "", "EnableCodeIndexing: Yes",
@@ -61,6 +59,8 @@ setup_project <- function(name, path = NULL, folders = NULL, git = TRUE, readme 
 
     cat(paste0(gitignore, collapse = "\n"), file = paste0(path_complete, "/.gitignore"))
 
+    message("> Setting up git repository.")
+
   }
 
   if (readme) {
@@ -68,8 +68,16 @@ setup_project <- function(name, path = NULL, folders = NULL, git = TRUE, readme 
     cat("\n# README\n\n<!-- badges: start -->\n<!-- badges: end -->\n\nThe goal of", name, "is to ...",
         file = paste0(path_complete, "/README.md"))
 
+    message("> Adding README file.")
+
+
   }
 
-  message("> All done! Go to '", path_complete, "' to find project.")
+  message("\n> All done! Please go to '", path_complete, "' to find project.")
 
+  if (git) {
+
+    message("> Please remember to initiate first git commit.")
+
+  }
 }
