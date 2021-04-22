@@ -15,7 +15,9 @@ Depends: R (>= 3.1)
 Imports:
     clustermq,
     data.table,
+    gert,
     ggplot2,
+    here,
     utils,
     raster,
     Rcpp,
