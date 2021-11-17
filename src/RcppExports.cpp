@@ -6,6 +6,11 @@
 
 using namespace Rcpp;
 
+#ifdef RCPP_USE_GLOBAL_ROSTREAM
+Rcpp::Rostream<true>&  Rcpp::Rcout = Rcpp::Rcpp_cout_get();
+Rcpp::Rostream<false>& Rcpp::Rcerr = Rcpp::Rcpp_cerr_get();
+#endif
+
 // rcpp_calculate_dist
 NumericVector rcpp_calculate_dist(NumericMatrix matrix, int max_dist);
 RcppExport SEXP _suppoRt_rcpp_calculate_dist(SEXP matrixSEXP, SEXP max_distSEXP) {

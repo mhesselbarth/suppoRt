@@ -1,3 +1,6 @@
+# suppoRt 0.6
+  * New function `update_pkgs()`
+
 # suppoRt 0.5
   * New function `calc_cv()`
   * New function `as_data_table()`

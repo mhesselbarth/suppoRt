@@ -16,7 +16,7 @@
 #'
 #' @return data.table
 #'
-#' @example
+#' @examples
 #' ras <- raster::raster(nrow = 10, ncol = 10)
 #' raster::values(ras) <- sample(x = c(1, 2, 3), size = 100, replace = TRUE)
 #' as_data_table(x = ras)

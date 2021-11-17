@@ -25,6 +25,12 @@ Convert raster object to data.table
 Function to convert a RasterLayer into a data.table. For rasters that cannot be
 hold in memory, values are written blockwise.
 }
+\examples{
+ras <- raster::raster(nrow = 10, ncol = 10)
+raster::values(ras) <- sample(x = c(1, 2, 3), size = 100, replace = TRUE)
+as_data_table(x = ras)
+
+}
 \references{
 Adapted from Etienne B. Racine (https://gist.github.com/etiennebr/9515738)
 }

@@ -22,8 +22,8 @@ reference:
   - title: Various
     contents:
       - show_environment
-      - submit_to_cluster
       - setup_project
+      - update_pkgs
 
 navbar:
   title: suppoRt
