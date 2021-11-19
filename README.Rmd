@@ -25,11 +25,11 @@ knitr::opts_chunk$set(
 
 ## Overview
 
-`suppoRt` is a growing collection of various suppoRt functions.
+**suppoRt** is a growing collection of various support functions for `R`.
 
 ## Installation
 
-To install `suppoRt` use: 
+To install **suppoRt** use: 
   
 ```{r, include = TRUE, eval = FALSE}
 install.packages("remotes") # if devtools is not already installed
