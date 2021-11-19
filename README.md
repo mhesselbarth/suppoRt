@@ -3,9 +3,8 @@
 
 <!-- badges: start -->
 
-![R-CMD-check](https://github.com/r-spatialecology/onpoint/workflows/R-CMD-check/badge.svg)
-[![Coverage
-status](https://codecov.io/gh/mhesselbarth/suppoRt/branch/main/graph/badge.svg)](https://codecov.io/gh/mhesselbarth/suppoRt)
+[![R-CMD-check](https://github.com/mhesselbarth/suppoRt/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/mhesselbarth/suppoRt/actions/workflows/R-CMD-check.yaml)
+[![codecov](https://codecov.io/gh/mhesselbarth/suppoRt/branch/main/graph/badge.svg?token=7jRqHcow3n)](https://codecov.io/gh/mhesselbarth/suppoRt)
 [![Project Status: Active – The project has reached a stable, usable
 state and is being actively
 developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
