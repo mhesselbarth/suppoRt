@@ -16,11 +16,12 @@ v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/li
 
 ## Overview
 
-`suppoRt` is a growing collection of various suppoRt functions.
+**suppoRt** is a growing collection of various support functions for
+`R`.
 
 ## Installation
 
-To install `suppoRt` use:
+To install **suppoRt** use:
 
 ``` r
 install.packages("remotes") # if devtools is not already installed
