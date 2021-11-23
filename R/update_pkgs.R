@@ -19,7 +19,7 @@
 #' @rdname update_pkgs
 
 #' @export
-update_pkgs <- function(exclude) {
+update_pkgs <- function(exclude = NULL) {
 
   # get all installed packages
   installed <- rownames(utils::installed.packages())
