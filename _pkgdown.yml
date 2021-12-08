@@ -5,6 +5,8 @@ template:
   bootswatch: yeti
 
 reference:
+  - contents:
+    - suppoRt
   - title: Replace values
     contents:
       - all_real
@@ -34,10 +36,10 @@ navbar:
     - icon: fa-home
       text: "Home"
       href: index.html
-  right:
     - icon: fa-gears
       text: "Functions"
       href: reference/index.html
+  right:
     - icon: fa-newspaper-o
       text: "News"
       href: news/index.html
