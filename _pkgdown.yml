@@ -24,6 +24,9 @@ reference:
       - show_environment
       - setup_project
       - update_pkgs
+  - title: Rcpp
+    contents:
+      - rcpp_calculate_dist
 
 navbar:
   title: suppoRt
