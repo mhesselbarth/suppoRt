@@ -1,8 +1,8 @@
-title: suppoRt | Support functions for R
+url: https://mhesselbarth.github.io/suppoRt/
 
 template:
-  params:
-    bootswatch: sandstone
+  bootstrap: 5
+  bootswatch: yeti
 
 reference:
   - title: Replace values
