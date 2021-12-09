@@ -5,8 +5,6 @@ template:
   bootswatch: yeti
 
 reference:
-  - contents:
-    - suppoRt
   - title: Replace values
     contents:
       - all_real
@@ -17,35 +15,42 @@ reference:
       - is_real
       - replace_infinite
       - split_at
+
   - title: Save objects
     contents:
       - save_ggplot
       - save_rds
+
   - title: Various
     contents:
       - show_environment
       - setup_project
       - update_pkgs
+
   - title: Rcpp
     contents:
       - rcpp_calculate_dist
 
 navbar:
-  title: suppoRt
-  left:
-    - icon: fa-home
-      text: "Home"
-      href: index.html
-    - icon: fa-gears
+  structure:
+    left:  [reference, news]
+    right: [github, contact, search]
+  components:
+
+    reference:
+      icon: fa-gears
       text: "Functions"
       href: reference/index.html
-  right:
-    - icon: fa-newspaper-o
+
+    news:
+      icon: fa-newspaper-o
       text: "News"
       href: news/index.html
-    - icon: fa-github fa-lg
-      text: "Github"
-      href: https://github.com/mhesselbarth/suppoRt
-    - icon: fa-user
-      text: Contact
+
+    contact:
+      icon: fa-user
       hreft: https://mhesselbarth.rbind.io
+
+home:
+  sidebar:
+    structure: [authors, license]

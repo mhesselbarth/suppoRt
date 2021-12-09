@@ -4,7 +4,7 @@
 \alias{update_pkgs}
 \title{update_pkgs}
 \usage{
-update_pkgs(exclude)
+update_pkgs(exclude = NULL)
 }
 \arguments{
 \item{exclude}{Vector with package names not to update.}

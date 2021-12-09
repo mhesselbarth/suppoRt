@@ -7,7 +7,7 @@
 #' @docType package
 #' @useDynLib suppoRt
 #' @importFrom Rcpp sourceCpp
-# nocov start
+#' @keywords internal
 "_PACKAGE"
 
 globalVariables(c(
@@ -21,5 +21,3 @@ globalVariables(c(
 
 # Make sure data.table knows we know we're using it
 .datatable.aware = TRUE
-
-# nocov end
