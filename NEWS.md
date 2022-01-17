@@ -1,5 +1,7 @@
 # suppoRt 0.6
   * New function `update_pkgs()`
+  * New function `rslurm_missing()`
+  * Remove `calc_cv()`
 
 # suppoRt 0.5
   * New function `calc_cv()`
