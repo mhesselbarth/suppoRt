@@ -35,11 +35,11 @@ rslurm_missing <- function(x) {
 
   missing_files <- setdiff(res_files, dir(path = tmpdir))
 
-  if (length(missing_files == 0)) {
+  if (length(missing_files) == 0) {
 
     message("Hooray! No missing .RDS-files.")
 
-    return(NULL)
+    return(NA)
 
   } else {
 
