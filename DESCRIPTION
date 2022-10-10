@@ -3,10 +3,10 @@ Type: Package
 Title: Collection of support functions
 Version: 0.6
 Authors@R: person("Maximilian H.K.", "Hesselbarth",
-                  email = "maximililan.hesselbarth@uni-goettingen.de",
+                  email = "mhk.hesselbarth@gmail.com",
                   role = c("aut", "cre"),
                   comment = c(ORCID = "0000-0003-1125-9918"))
-Maintainer: Maximilian H.K. Hesselbarth <maximililan.hesselbarth@uni-goettingen.de>
+Maintainer: Maximilian H.K. Hesselbarth <mhk.hesselbarth@gmail.com>
 Description: Growing collection of support functions.
 License: GPL (>= 3)
 URL: https://github.com/mhesselbarth/suppoRt
@@ -31,5 +31,4 @@ RoxygenNote: 7.1.2
 Encoding: UTF-8
 LazyData: true
 LinkingTo: 
-    Rcpp,
-    RcppArmadillo
+    Rcpp
