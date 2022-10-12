@@ -33,11 +33,10 @@ knitr::opts_chunk$set(
 
 ## Installation
 
-To install **suppoRt** use: 
+To install **suppoRt**, please use: 
   
 ```{r, include = TRUE, eval = FALSE}
-install.packages("remotes")
-
+# install.packages("remotes")
 remotes::install_github("mhesselbarth/suppoRt")
 ```
 
