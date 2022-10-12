@@ -1,5 +1,7 @@
 ---
-output: github_document
+output: 
+    github_document:
+      html_preview: false
 ---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
@@ -43,4 +45,4 @@ remotes::install_github("mhesselbarth/suppoRt")
 
 Please note that the **suppoRt** package is released with a [Contributor Code of Conduct](CODE_OF_CONDUCT.md). By contributing to this project, you agree to abide by its terms.
 
-To see how to contribute to this project, please see the [Contributing guidelines](CONTRIBUTING.md).
+To contribute to this project, please see the [Contributing guidelines](CONTRIBUTING.md).

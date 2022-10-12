@@ -31,11 +31,11 @@ jobs:
 
       - uses: r-lib/actions/setup-pandoc@v2
 
-      - name: Install spatial dependencie
-        if: runner.os == 'macOS'
-        run: |
-         brew install gdal
-         brew install proj
+      # - name: Install spatial dependencie
+      #   if: runner.os == 'macOS'
+      #   run: |
+      #    brew install gdal
+      #    brew install proj
 
       - uses: r-lib/actions/setup-r@v2
         with:
