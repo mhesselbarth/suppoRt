@@ -33,15 +33,15 @@ replace_infinite <- function(x, what = c("NaN", "Inf"), value = c(NA, NA),
   }
 
   # check if input is numeric
-  if (class(x) != "numeric") {
+  if (!inherits(x = x, what = "numeric")) {
     stop("input must be of class 'numeric'.", call. = FALSE)
   }
 
   # replace NaN and Inf
-  if(all(what == c("NaN", "Inf"))) {
+  if (all(what == c("NaN", "Inf"))) {
 
-    if(length(value) < 2) {
-      if(verbose) {
+    if (length(value) < 2) {
+      if (verbose) {
         warning("Using 'value' as replace value twice", call. = FALSE)
       }
 
@@ -58,7 +58,7 @@ replace_infinite <- function(x, what = c("NaN", "Inf"), value = c(NA, NA),
   # only replay NaN
   else if (what == "NaN") {
 
-    if(length(value) > 1) {
+    if (length(value) > 1) {
       warning("Only using first 'value' as replace value", call. = FALSE)
     }
 
@@ -70,8 +70,8 @@ replace_infinite <- function(x, what = c("NaN", "Inf"), value = c(NA, NA),
   # only replace Inf
   else if (what == "Inf") {
 
-    if(verbose) {
-      if(length(value) > 1) {
+    if (verbose) {
+      if (length(value) > 1) {
         warning("Only using first 'value' as replace value", call. = FALSE)
       }
     }

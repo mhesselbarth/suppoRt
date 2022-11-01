@@ -32,17 +32,17 @@ is_real <- function(x, include_na = FALSE, verbose = TRUE) {
   }
 
   # check if input is numeric
-  if (class(x) != "numeric") {
+  if (!inherits(x = x, what = "numeric")) {
     stop("input must be of class 'numeric'.", call. = FALSE)
   }
 
-  if(!include_na) {
+  if (!include_na) {
     result <- is.infinite(x) | is.nan(x)
   } else {
     result <- is.infinite(x) | is.nan(x) | is.na(x)
   }
 
-  if(verbose) {
+  if (verbose) {
     message("> Includes ", sum(result), " non-real values")
   }
 

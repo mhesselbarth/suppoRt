@@ -27,10 +27,6 @@ reference:
       - setup_project
       - update_pkgs
 
-  - title: Rcpp
-    contents:
-      - rcpp_calculate_dist
-
 navbar:
   structure:
     left:  [reference, news]
