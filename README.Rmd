@@ -17,7 +17,7 @@ knitr::opts_chunk$set(
 
 # suppoRt
 
-Last updated: `r Sys.date()`
+Last updated: `r Sys.Date()`
 
 <!-- badges: start -->
 
