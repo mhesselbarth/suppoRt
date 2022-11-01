@@ -3,6 +3,8 @@
 
 # suppoRt
 
+Last updated: 2022-11-01
+
 <!-- badges: start -->
 
 [![Project Status: Active – The project has reached a stable, usable
@@ -23,11 +25,10 @@ v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/li
 
 ## Installation
 
-To install **suppoRt** use:
+To install **suppoRt**, please use:
 
 ``` r
-install.packages("remotes")
-
+# install.packages("remotes")
 remotes::install_github("mhesselbarth/suppoRt")
 ```
 
@@ -37,5 +38,5 @@ Please note that the **suppoRt** package is released with a [Contributor
 Code of Conduct](CODE_OF_CONDUCT.md). By contributing to this project,
 you agree to abide by its terms.
 
-To see how to contribute to this project, please see the [Contributing
+To contribute to this project, please see the [Contributing
 guidelines](CONTRIBUTING.md).
