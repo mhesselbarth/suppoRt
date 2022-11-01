@@ -1,3 +1,7 @@
+# suppoRt 0.7 
+* Remove Rcpp functions
+* Update gh-actions
+
 # suppoRt 0.6
   * New function `update_pkgs()`
   * New function `rslurm_missing()`

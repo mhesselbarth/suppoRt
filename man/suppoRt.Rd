@@ -17,7 +17,7 @@ Useful links:
 
 }
 \author{
-\strong{Maintainer}: Maximilian H.K. Hesselbarth \email{maximililan.hesselbarth@uni-goettingen.de} (\href{https://orcid.org/0000-0003-1125-9918}{ORCID})
+\strong{Maintainer}: Maximilian H.K. Hesselbarth \email{mhk.hesselbarth@gmail.com} (\href{https://orcid.org/0000-0003-1125-9918}{ORCID})
 
 }
 \keyword{internal}

@@ -1,7 +1,7 @@
 Package: suppoRt
 Type: Package
 Title: Collection of support functions
-Version: 0.6
+Version: 0.7
 Authors@R: person("Maximilian H.K.", "Hesselbarth",
                   email = "mhk.hesselbarth@gmail.com",
                   role = c("aut", "cre"),
@@ -19,16 +19,12 @@ Imports:
     here,
     raster,
     remotes,
-    Rcpp,
     stats,
-    tools, 
     utils
 Suggests:
     covr,
     testthat,
     tibble
-RoxygenNote: 7.1.2
+RoxygenNote: 7.2.1
 Encoding: UTF-8
 LazyData: true
-LinkingTo: 
-    Rcpp

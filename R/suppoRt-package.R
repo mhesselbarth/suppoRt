@@ -5,8 +5,6 @@
 
 #' @name suppoRt
 #' @docType package
-#' @useDynLib suppoRt
-#' @importFrom Rcpp sourceCpp
 #' @keywords internal
 "_PACKAGE"
 
