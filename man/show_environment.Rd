@@ -23,6 +23,9 @@ show_environment(
 
 \item{n}{Number of top rows to print.}
 }
+\value{
+data.frame
+}
 \description{
 Show memory use
 }

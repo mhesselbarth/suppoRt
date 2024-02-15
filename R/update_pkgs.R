@@ -15,9 +15,6 @@
 #' update_pkgs(exclude = c("pkg_a", "pkg_b"))
 #' }
 #'
-#' @aliases update_pkgs
-#' @rdname update_pkgs
-
 #' @export
 update_pkgs <- function(exclude = NULL) {
 

@@ -2,8 +2,8 @@
 % Please edit documentation in R/suppoRt-package.R
 \docType{package}
 \name{suppoRt}
-\alias{suppoRt}
 \alias{suppoRt-package}
+\alias{suppoRt}
 \title{suppoRt}
 \description{
 Collection of helper functions

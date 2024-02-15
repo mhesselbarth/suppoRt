@@ -26,9 +26,6 @@
 #' save_ggplot(result_plot, filename = "result_ggpplot.jpeg")
 #' }
 #'
-#' @aliases save_ggplot
-#' @rdname save_ggplot
-
 #' @export
 save_ggplot <- function(plot, filename = NULL, path = NULL,
                         overwrite = FALSE, rm_plot = FALSE, ...) {

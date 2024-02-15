@@ -20,9 +20,6 @@
 #' y <- c(1, 2, 3, 4, 5, 6, 7)
 #' is_real(y)
 #'
-#' @aliases is_real
-#' @rdname is_real
-
 #' @export
 is_real <- function(x, include_na = FALSE, verbose = TRUE) {
 

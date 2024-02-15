@@ -21,9 +21,6 @@
 #' raster::values(ras) <- sample(x = c(1, 2, 3), size = 100, replace = TRUE)
 #' as_data_table(x = ras)
 #'
-#' @aliases as_data_table
-#' @rdname as_data_table
-#'
 #' @export
 as_data_table <- function(x, na.rm = TRUE, return_df = TRUE, verbose = TRUE) {
 

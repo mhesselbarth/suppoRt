@@ -24,9 +24,6 @@
 #' save_rds(x, filename = "random_numbers.rds")
 #' }
 #'
-#' @aliases save_rds
-#' @rdname save_rds
-
 #' @export
 save_rds <- function(object, filename = NULL, path = NULL,
                      overwrite = FALSE, rm_object = FALSE, ...){

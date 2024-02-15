@@ -16,9 +16,6 @@
 #' @examples
 #' \dontrun{setup_project(name = "Analysis_project", path = "~/Desktop")}
 #'
-#' @aliases setup_project
-#' @rdname setup_project
-
 #' @export
 setup_project <- function(name, path = NULL, folders = NULL, git = TRUE, readme = TRUE) {
 

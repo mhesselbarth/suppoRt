@@ -15,6 +15,8 @@
 #' @seealso
 #' \code{\link{object.size}}
 #
+#' @return data.frame
+#'
 #' @examples
 #' vec <- 1:100
 #' vec_2 <- runif(n = 10)
@@ -24,9 +26,6 @@
 #'
 #' show_environment()
 #'
-#' @aliases show_environment
-#' @rdname show_environment
-
 #' @export
 show_environment <- function(what = NULL, sort = "size", units = "Mb", decreasing = TRUE, n = NULL) {
 

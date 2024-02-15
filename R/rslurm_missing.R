@@ -15,9 +15,6 @@
 #' rslurm_missing(x = sbatch_results)
 #' }
 #'
-#' @aliases rslurm_missing
-#' @rdname rslurm_missing
-
 #' @export
 rslurm_missing <- function(x) {
 

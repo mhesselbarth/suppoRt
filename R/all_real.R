@@ -19,9 +19,6 @@
 #' y <- c(1, 2, 3, 4, 5, 6, 7)
 #' all_real(y)
 #'
-#' @aliases all_real
-#' @rdname all_real
-
 #' @export
 all_real <- function(x, include_na = FALSE, verbose = TRUE) {
 

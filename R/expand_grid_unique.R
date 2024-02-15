@@ -16,9 +16,6 @@
 #' y <- 1:5
 #' expand_grid_unique(x, y)
 #'
-#' @aliases expand_grid_unique
-#' @rdname expand_grid_unique
-
 #' @export
 expand_grid_unique <- function(x, y, equals = FALSE)
 {

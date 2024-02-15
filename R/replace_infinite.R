@@ -20,9 +20,6 @@
 #' replace_infinite(vec, what = "NaN", value = NA)
 #' replace_infinite(vec, value = c(NA, 0))
 #'
-#' @aliases replace_infinite
-#' @rdname replace_infinite
-
 #' @export
 replace_infinite <- function(x, what = c("NaN", "Inf"), value = c(NA, NA),
                              verbose = TRUE) {
