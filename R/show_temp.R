@@ -1,8 +1,9 @@
-#' remove_tmp
+#' show_temp
 #'
 #' @description Remove temporary folders
 #'
-#' @param delete Logical if folders should be deleted
+#' @param remove Logical if folders should be deleted.
+#' @param verbose Logical if messages should be printed.
 #'
 #' @details
 #' The functions searches for all temporary folders and returns them as a vector.
@@ -10,21 +11,24 @@
 #'
 #' @return  vector
 #'
-#' @examples
-#' remove_tmp()
+#' @examples show_temp()
 #'
 #' @export
-remove_tmp <- function(delete = FALSE) {
+show_temp <- function(remove = FALSE, verbose = TRUE) {
 
   # get path to temp dir
   temp_dir <- Sys.getenv("TEMP")
 
-  # detect and delete folders with pattern "rtmp"
+  # detect folders with pattern "rtmp"
   folders <- dir(temp_dir, pattern = "^Rtmp", full.names = TRUE)
 
   # delete folders
-  if (delete) {
+  if (remove) {
+
     unlink(folders, recursive = TRUE, force = TRUE, expand = TRUE)
+
+    if (verbose) message("Deleted ", length(folders), " temporary files.")
+
   }
 
   return(folders)

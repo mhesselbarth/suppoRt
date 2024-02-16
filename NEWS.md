@@ -1,5 +1,5 @@
 # suppoRt 0.8
-* Adding `remove_tmp()` function
+* Adding `show_temp()` function
 * Improve documentation
 
 # suppoRt 0.7 
