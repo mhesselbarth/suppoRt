@@ -24,7 +24,7 @@ reference:
     contents:
       - rslurm_missing
       - show_environment
-      - remove_tmp
+      - show_temp
       - setup_project
       - update_pkgs
 
