@@ -27,10 +27,9 @@ show_temp <- function(remove = FALSE, verbose = TRUE) {
 
     unlink(folders, recursive = TRUE, force = TRUE, expand = TRUE)
 
-    if (verbose) message("Deleted ", length(folders), " temporary files.")
+    if (verbose) message("Deleted ", length(folders), " temporary file(s).")
 
+  } else {
+    return(folders)
   }
-
-  return(folders)
-
 }
