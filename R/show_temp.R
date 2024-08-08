@@ -7,7 +7,7 @@
 #'
 #' @details
 #' The functions searches for all temporary folders and returns them as a vector.
-#' Can also delete all files using `unlink(x, recursive = TRUE, force = TRUE, expand = TRUE)`
+#' Can also delete all files using \code{unlink(x, recursive = TRUE, force = TRUE, expand = TRUE)}
 #'
 #' @return  vector
 #'

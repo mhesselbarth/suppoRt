@@ -7,8 +7,9 @@
 #' @param verbose Logical if number of non-real numbers should be printed as message.
 #'
 #' @details
-#' The function checks if a vector contains real numbers and returns `FALSE` for
-#' `NaN` or `Inf` values. Input must be a vector. If `include_na = TRUE` also `NA`s are considered.
+#' The function checks if a vector contains real numbers and returns \code{FALSE}
+#' for \code{NaN} or \code{Inf} values. Input must be a vector. If \code{include_na = TRUE}
+#' also \code{NA} values are considered.
 #'
 #' @return  vector
 #'

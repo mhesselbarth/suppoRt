@@ -12,8 +12,11 @@
 #'
 #' @details
 #' This function checks if the plot aready exists before saving it. If the file aready
-#' exists and `overwrite = FALSE` (default), the file is not saved. The filename and path
-#' is combined using `file.path()`. See `?ggplot2::ggsave()` for more information.
+#' exists and \code{overwrite = FALSE} (default), the file is not saved. The filename and path
+#' is combined using \code{file.path()}. See \code{?ggplot2::ggsave()} for more information.
+#'
+#' It is possible to set \code{path = ""} and use the entire path including the file
+#' name as \code{filename} argument.
 #'
 #' @seealso
 #' \code{\link{ggsave}}

@@ -24,7 +24,7 @@ void
 Setup project
 }
 \details{
-Create project folder with certain structure
+Create project folder with certain structure.
 }
 \examples{
 \dontrun{setup_project(name = "Analysis_project", path = "~/Desktop")}

@@ -9,7 +9,7 @@
 #' @param readme Logical if README.md should be added.
 #'
 #' @details
-#' Create project folder with certain structure
+#' Create project folder with certain structure.
 #'
 #' @return void
 #'

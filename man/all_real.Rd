@@ -20,8 +20,8 @@ vector
 All real
 }
 \details{
-The function checks if a vector contains `NaN` or `Inf` values. Input must be a vector.
-If `include_na = TRUE` also `NA`s are considered.
+The function checks if a vector contains \code{NaN} or \code{Inf} values. Input
+must be a vector. If \code{include_na = TRUE} also \code{NA} values are considered.
 }
 \examples{
 x <- c(1, 2, 3, NA, 5, NaN, Inf)

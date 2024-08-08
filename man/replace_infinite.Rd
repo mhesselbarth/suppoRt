@@ -22,9 +22,9 @@ vector
 Replace infinite
 }
 \details{
-The function converts all `NaN` and `Inf` values to NA. Input must be a vector.
-What can be either `what = c("NaN", "Inf")` to replace both `NaN` and `Inf` or just
-one of the two, e.g. `what = "NaN`.
+The function converts all \code{NaN} and \code{Inf} values to \code{NA}. Input
+must be a vector. Can be either \code{what = c("NaN", "Inf")} to replace both
+\code{NaN} and \code{Inf} or just one of the two, e.g. \code{what = "NaN"}.
 }
 \examples{
 vec <- c(1, 2, 3, NA, 5, NaN, Inf)
