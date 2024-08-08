@@ -38,6 +38,12 @@ save_ggplot <- function(plot, filename = NULL, path = NULL,
 
   complete_file <- file.path(path, filename)
 
+  if (substr(x = complete_file, start = 1, stop = 1) == "/") {
+
+    complete_file <- sub(pattern = "/", replacement = "", x = complete_file)
+
+  }
+
   message("> Trying to save ggplot: ", complete_file, appendLF = TRUE)
 
   if (file.exists(complete_file)) {

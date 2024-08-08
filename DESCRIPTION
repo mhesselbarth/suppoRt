@@ -1,7 +1,7 @@
 Package: suppoRt
 Type: Package
 Title: Collection of support functions
-Version: 0.7
+Version: 0.8
 Authors@R: person("Maximilian H.K.", "Hesselbarth",
                   email = "mhk.hesselbarth@gmail.com",
                   role = c("aut", "cre"),
@@ -25,6 +25,6 @@ Suggests:
     covr,
     testthat,
     tibble
-RoxygenNote: 7.3.1
+RoxygenNote: 7.3.2
 Encoding: UTF-8
 LazyData: true

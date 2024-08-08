@@ -32,7 +32,10 @@ Save rds
 \details{
 This function checks if the file aready exists before saving it. If the file aready
 exists and `overwrite = FALSE` (default), the file is not saved. The filename and path
-is combined using `file.path()`. See `?base::saveRDS()`` for more information
+is combined using `file.path()`. See `?base::saveRDS()`` for more information.
+
+It viss possible to set `path = ""` and set the entire path including the name as
+the `filename` argument.
 }
 \examples{
 \dontrun{

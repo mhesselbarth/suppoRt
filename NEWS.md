@@ -1,5 +1,6 @@
 # suppoRt 0.8
 * Adding `show_temp()` function
+* Allowing to specify filename only for `save_rds` and `save_ggplot`
 * Improve documentation
 
 # suppoRt 0.7 

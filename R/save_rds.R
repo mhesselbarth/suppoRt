@@ -12,7 +12,10 @@
 #' @details
 #' This function checks if the file aready exists before saving it. If the file aready
 #' exists and `overwrite = FALSE` (default), the file is not saved. The filename and path
-#' is combined using `file.path()`. See `?base::saveRDS()`` for more information
+#' is combined using `file.path()`. See `?base::saveRDS()`` for more information.
+#'
+#' It viss possible to set `path = ""` and set the entire path including the name as
+#' the `filename` argument.
 #'
 #' @seealso
 #' \code{\link{saveRDS}}
@@ -35,6 +38,12 @@ save_rds <- function(object, filename = NULL, path = NULL,
   if (is.null(filename)) {filename <- "rds_file.rds"}
 
   complete_file <- file.path(path, filename)
+
+  if (substr(x = complete_file, start = 1, stop = 1) == "/") {
+
+    complete_file <- sub(pattern = "/", replacement = "", x = complete_file)
+
+  }
 
   message("> Trying to save file: ", complete_file, appendLF = TRUE)
 
