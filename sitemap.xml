@@ -1,72 +1,26 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://mhesselbarth.github.io/suppoRt/404.html</loc>
-  </url>
-  <url>
-    <loc>https://mhesselbarth.github.io/suppoRt/CODE_OF_CONDUCT.html</loc>
-  </url>
-  <url>
-    <loc>https://mhesselbarth.github.io/suppoRt/CONTRIBUTING.html</loc>
-  </url>
-  <url>
-    <loc>https://mhesselbarth.github.io/suppoRt/LICENSE.html</loc>
-  </url>
-  <url>
-    <loc>https://mhesselbarth.github.io/suppoRt/authors.html</loc>
-  </url>
-  <url>
-    <loc>https://mhesselbarth.github.io/suppoRt/index.html</loc>
-  </url>
-  <url>
-    <loc>https://mhesselbarth.github.io/suppoRt/news/index.html</loc>
-  </url>
-  <url>
-    <loc>https://mhesselbarth.github.io/suppoRt/reference/all_real.html</loc>
-  </url>
-  <url>
-    <loc>https://mhesselbarth.github.io/suppoRt/reference/any_real.html</loc>
-  </url>
-  <url>
-    <loc>https://mhesselbarth.github.io/suppoRt/reference/as_data_table.html</loc>
-  </url>
-  <url>
-    <loc>https://mhesselbarth.github.io/suppoRt/reference/expand_grid_unique.html</loc>
-  </url>
-  <url>
-    <loc>https://mhesselbarth.github.io/suppoRt/reference/index.html</loc>
-  </url>
-  <url>
-    <loc>https://mhesselbarth.github.io/suppoRt/reference/is_real.html</loc>
-  </url>
-  <url>
-    <loc>https://mhesselbarth.github.io/suppoRt/reference/replace_infinite.html</loc>
-  </url>
-  <url>
-    <loc>https://mhesselbarth.github.io/suppoRt/reference/rslurm_missing.html</loc>
-  </url>
-  <url>
-    <loc>https://mhesselbarth.github.io/suppoRt/reference/save_ggplot.html</loc>
-  </url>
-  <url>
-    <loc>https://mhesselbarth.github.io/suppoRt/reference/save_rds.html</loc>
-  </url>
-  <url>
-    <loc>https://mhesselbarth.github.io/suppoRt/reference/setup_project.html</loc>
-  </url>
-  <url>
-    <loc>https://mhesselbarth.github.io/suppoRt/reference/show_environment.html</loc>
-  </url>
-  <url>
-    <loc>https://mhesselbarth.github.io/suppoRt/reference/show_temp.html</loc>
-  </url>
-  <url>
-    <loc>https://mhesselbarth.github.io/suppoRt/reference/split_at.html</loc>
-  </url>
-  <url>
-    <loc>https://mhesselbarth.github.io/suppoRt/reference/suppoRt.html</loc>
-  </url>
-  <url>
-    <loc>https://mhesselbarth.github.io/suppoRt/reference/update_pkgs.html</loc>
-  </url>
+<urlset xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'>
+<url><loc>https://mhesselbarth.github.io/suppoRt/404.html</loc></url>
+<url><loc>https://mhesselbarth.github.io/suppoRt/CODE_OF_CONDUCT.html</loc></url>
+<url><loc>https://mhesselbarth.github.io/suppoRt/CONTRIBUTING.html</loc></url>
+<url><loc>https://mhesselbarth.github.io/suppoRt/LICENSE.html</loc></url>
+<url><loc>https://mhesselbarth.github.io/suppoRt/authors.html</loc></url>
+<url><loc>https://mhesselbarth.github.io/suppoRt/index.html</loc></url>
+<url><loc>https://mhesselbarth.github.io/suppoRt/news/index.html</loc></url>
+<url><loc>https://mhesselbarth.github.io/suppoRt/reference/all_real.html</loc></url>
+<url><loc>https://mhesselbarth.github.io/suppoRt/reference/any_real.html</loc></url>
+<url><loc>https://mhesselbarth.github.io/suppoRt/reference/as_data_table.html</loc></url>
+<url><loc>https://mhesselbarth.github.io/suppoRt/reference/expand_grid_unique.html</loc></url>
+<url><loc>https://mhesselbarth.github.io/suppoRt/reference/index.html</loc></url>
+<url><loc>https://mhesselbarth.github.io/suppoRt/reference/is_real.html</loc></url>
+<url><loc>https://mhesselbarth.github.io/suppoRt/reference/replace_infinite.html</loc></url>
+<url><loc>https://mhesselbarth.github.io/suppoRt/reference/rslurm_missing.html</loc></url>
+<url><loc>https://mhesselbarth.github.io/suppoRt/reference/save_ggplot.html</loc></url>
+<url><loc>https://mhesselbarth.github.io/suppoRt/reference/save_rds.html</loc></url>
+<url><loc>https://mhesselbarth.github.io/suppoRt/reference/setup_project.html</loc></url>
+<url><loc>https://mhesselbarth.github.io/suppoRt/reference/show_environment.html</loc></url>
+<url><loc>https://mhesselbarth.github.io/suppoRt/reference/show_temp.html</loc></url>
+<url><loc>https://mhesselbarth.github.io/suppoRt/reference/split_at.html</loc></url>
+<url><loc>https://mhesselbarth.github.io/suppoRt/reference/suppoRt.html</loc></url>
+<url><loc>https://mhesselbarth.github.io/suppoRt/reference/update_pkgs.html</loc></url>
 </urlset>
+
