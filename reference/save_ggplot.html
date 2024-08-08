@@ -81,8 +81,10 @@
     <div class="section level2">
     <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>
     <p>This function checks if the plot aready exists before saving it. If the file aready
-exists and `overwrite = FALSE` (default), the file is not saved. The filename and path
-is combined using `file.path()`. See `?ggplot2::ggsave()` for more information.</p>
+exists and <code>overwrite = FALSE</code> (default), the file is not saved. The filename and path
+is combined using <code><a href="https://rdrr.io/r/base/file.path.html" class="external-link">file.path()</a></code>. See <code>?ggplot2::ggsave()</code> for more information.</p>
+<p>It is possible to set <code>path = ""</code> and use the entire path including the file
+name as <code>filename</code> argument.</p>
     </div>
     <div class="section level2">
     <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>
