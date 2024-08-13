@@ -1,3 +1,6 @@
+# suppoRt 0.9
+* Adding `rslurm_read` function
+
 # suppoRt 0.8
 * Adding `show_temp()` function
 * Allowing to specify filename only for `save_rds` and `save_ggplot`
