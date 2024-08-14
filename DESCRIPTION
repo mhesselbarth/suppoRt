@@ -9,7 +9,7 @@ Authors@R: person("Maximilian H.K.", "Hesselbarth",
 Maintainer: Maximilian H.K. Hesselbarth <mhk.hesselbarth@gmail.com>
 Description: Growing collection of support functions.
 License: GPL (>= 3)
-URL: https://github.com/mhesselbarth/suppoRt
+URL: https://mhesselbarth.github.io/suppoRt/
 BugReports: https://github.com/mhesselbarth/suppoRt/issues
 Depends: R (>= 3.1)
 Imports:

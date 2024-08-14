@@ -23,6 +23,7 @@ reference:
   - title: Various
     contents:
       - rslurm_missing
+      - rslurm_read
       - show_environment
       - show_temp
       - setup_project

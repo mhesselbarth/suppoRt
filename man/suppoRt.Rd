@@ -11,7 +11,7 @@ Collection of helper functions
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://github.com/mhesselbarth/suppoRt}
+  \item \url{https://mhesselbarth.github.io/suppoRt/}
   \item Report bugs at \url{https://github.com/mhesselbarth/suppoRt/issues}
 }
 
