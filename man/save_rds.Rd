@@ -9,7 +9,7 @@ save_rds(
   filename = NULL,
   path = NULL,
   overwrite = FALSE,
-  rm_object = FALSE,
+  verbose = TRUE,
   ...
 )
 }
@@ -22,7 +22,7 @@ save_rds(
 
 \item{overwrite}{If true, existing file is overwritten.}
 
-\item{rm_object}{If true, the object is removed form the environment.}
+\item{verbose}{If true, messages are printed to the console.}
 
 \item{...}{Options passed to saveRDS.}
 }

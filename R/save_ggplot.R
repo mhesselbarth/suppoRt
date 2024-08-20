@@ -6,8 +6,7 @@
 #' @param filename File name to create on disk. The device (e.g. jpeg) must be specified as file extension.
 #' @param path Path to save plot to (combined with filename).
 #' @param overwrite If true, existing file is overwritten.
-#' @param rm_plot If true, the plot is removed form the environment.
-
+#' @param verbose If true, messages are printed to the console.
 #' @param ... Options passed to ggsave.
 #'
 #' @details
@@ -31,9 +30,7 @@
 #'
 #' @export
 save_ggplot <- function(plot, filename = NULL, path = NULL,
-                        overwrite = FALSE, rm_plot = FALSE, ...) {
-
-  # plot_name <- deparse(substitute(object))
+                        overwrite = FALSE, verbose = TRUE, ...) {
 
   if (is.null(path)) {path <- getwd()}
 
@@ -54,32 +51,21 @@ save_ggplot <- function(plot, filename = NULL, path = NULL,
     if (overwrite == TRUE) {
 
       ggplot2::ggsave(plot = plot, filename = filename, path = path, ...)
+      if (verbose) message("> Existing ggplot overwriten", appendLF = TRUE)
 
-      message("> Existing ggplot overwriten", appendLF = TRUE)
-
-      # if (rm_plot) {
-      #
-      #   # remove plot from environment
-      #   remove(plot_name, envir = globalenv())
-      # }
     }
 
-    else{
+    else {
 
-      warning("Existing ggplot not overwriten", call. = FALSE)
-      }
+      if (verbose) warning("Existing ggplot not overwriten", call. = FALSE)
+
+    }
   }
 
   else{
 
     ggplot2::ggsave(plot = plot, filename = filename, path = path, ...)
+    if (verbose) message("> New ggplot written", appendLF = TRUE)
 
-    message("> New ggplot written", appendLF = TRUE)
-
-    # if (rm_plot) {
-    #
-    #   # remove plot from environment
-    #   remove(plot_name, envir = globalenv())
-    # }
   }
 }

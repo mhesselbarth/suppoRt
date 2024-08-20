@@ -1,5 +1,6 @@
 # suppoRt 0.9
 * Adding `rslurm_read` function
+* Adding `verbose` argument to `save_*` functions
 
 # suppoRt 0.8
 * Adding `show_temp()` function

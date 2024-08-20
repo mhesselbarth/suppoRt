@@ -6,7 +6,7 @@
 #' @param filename Name of the file where the R object is saved (file extension must be .rds).
 #' @param path Path to where the R object is saved.
 #' @param overwrite If true, existing file is overwritten.
-#' @param rm_object If true, the object is removed form the environment.
+#' @param verbose If true, messages are printed to the console.
 #' @param ... Options passed to saveRDS.
 #'
 #' @details
@@ -29,9 +29,7 @@
 #'
 #' @export
 save_rds <- function(object, filename = NULL, path = NULL,
-                     overwrite = FALSE, rm_object = FALSE, ...){
-
-  # object_name <- deparse(substitute(object))
+                     overwrite = FALSE, verbose = TRUE, ...){
 
   if (is.null(path)) {path <- getwd()}
 
@@ -45,38 +43,28 @@ save_rds <- function(object, filename = NULL, path = NULL,
 
   }
 
-  message("> Trying to save file: ", complete_file, appendLF = TRUE)
+  if (verbose) message("> Trying to save file: ", complete_file, appendLF = TRUE)
 
   if (base::file.exists(complete_file)) {
 
     if (overwrite == TRUE) {
 
       saveRDS(object = object, file = complete_file, ...)
+      if (verbose) message("> Existing file overwriten", appendLF = TRUE)
 
-      message("> Existing file overwriten", appendLF = TRUE)
-
-      # if (rm_object) {
-      #
-      #   # remove object from environment
-      #   remove(object_name, inherits = TRUE, envir = globalenv())
-      # }
     }
 
-    else{
+    else {
 
-      warning("Existing file not overwriten", call. = FALSE)
-      }
+      if (verbose) warning("Existing file not overwriten", call. = FALSE)
+
+    }
   }
 
   else{
+
     saveRDS(object = object, file = complete_file, ...)
+    if (verbose) message("> New file written", appendLF = TRUE)
 
-    message("> New file written", appendLF = TRUE)
-
-    # if (rm_object) {
-    #
-    #   # remove object from environment
-    #   remove(object_name, inherits = TRUE, envir = globalenv())
-    # }
   }
 }

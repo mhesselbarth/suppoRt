@@ -9,7 +9,7 @@ save_ggplot(
   filename = NULL,
   path = NULL,
   overwrite = FALSE,
-  rm_plot = FALSE,
+  verbose = TRUE,
   ...
 )
 }
@@ -22,7 +22,7 @@ save_ggplot(
 
 \item{overwrite}{If true, existing file is overwritten.}
 
-\item{rm_plot}{If true, the plot is removed form the environment.}
+\item{verbose}{If true, messages are printed to the console.}
 
 \item{...}{Options passed to ggsave.}
 }
