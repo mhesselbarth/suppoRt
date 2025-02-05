@@ -11,7 +11,7 @@
 #' for \code{NaN} or \code{Inf} values. Input must be a vector. If \code{include_na = TRUE}
 #' also \code{NA} values are considered.
 #'
-#' @return  vector
+#' @return vector
 #'
 #' @examples
 #' x <- c(1, 2, 3, NA, 5, NaN, Inf)

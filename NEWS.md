@@ -1,3 +1,6 @@
+# suppoRt 1.0
+* Adding `list_linked_files()` and `find_orphan_files()`
+
 # suppoRt 0.9
 * Adding `rslurm_read` function
 * Adding `verbose` argument to `save_*` functions

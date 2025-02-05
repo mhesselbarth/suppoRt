@@ -1,7 +1,7 @@
 Package: suppoRt
 Type: Package
 Title: Collection of support functions
-Version: 0.9
+Version: 1.0
 Authors@R: person("Maximilian H.K.", "Hesselbarth",
                   email = "mhk.hesselbarth@gmail.com",
                   role = c("aut", "cre"),
@@ -17,9 +17,12 @@ Imports:
     gert,
     ggplot2,
     here,
+    purrr,
     raster,
     remotes,
+    rstudioapi,
     stats,
+    stringr,
     utils
 Suggests:
     covr,
