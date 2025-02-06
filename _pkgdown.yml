@@ -22,6 +22,8 @@ reference:
 
   - title: Various
     contents:
+      - find_orphan_files
+      - list_linked_files
       - rslurm_missing
       - rslurm_read
       - show_environment
