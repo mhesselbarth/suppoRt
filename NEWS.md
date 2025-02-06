@@ -1,5 +1,5 @@
 # suppoRt 1.0
-* Adding `list_linked_files()` and `find_orphan_files()`
+* Adding `zotero_orphan_pdf()` and `zotero_missing_pdf()`
 
 # suppoRt 0.9
 * Adding `rslurm_read` function

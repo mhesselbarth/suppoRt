@@ -1,4 +1,4 @@
-#' list_linked_files
+#' zotero_linked_files
 #'
 #' @description List linked files
 #'
@@ -18,10 +18,10 @@
 #' @return vector
 #'
 #' @examples
-#' \dontrun{list_linked_files()}
+#' \dontrun{zotero_linked_files()}
 #'
-#' @export
-list_linked_files <- function(lib_file = file.choose(), full_name = TRUE) {
+#' @keywords internal
+zotero_linked_files <- function(lib_file = file.choose(), full_name = TRUE) {
 
   # read file names of Zotero database
   file_vec <- utils::read.csv(lib_file, na.strings = c("NA", ""))[, "File.Attachments"]

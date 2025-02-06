@@ -22,14 +22,14 @@ reference:
 
   - title: Various
     contents:
-      - find_orphan_files
-      - list_linked_files
       - rslurm_missing
       - rslurm_read
       - show_environment
       - show_temp
       - setup_project
       - update_pkgs
+      - zotero_missing_files
+      - zotero_orphan_files
 
 navbar:
   structure:
