@@ -15,7 +15,7 @@ test_that("replace_infinite replaces all Inf and NaN values with only 1 value", 
 
   data <- c(1, 2, 3, NaN, 5, Inf)
 
-  result <- replace_infinite(x = data, value = -999)
+  result <- replace_infinite(x = data, value = c(-999, -999))
 
   expect_true(all(!is.infinite(result)))
   expect_true(all(!is.nan(result)))
@@ -43,7 +43,7 @@ test_that("replace_infinite only replace Inf OR NaN", {
   expect_true(any(result_inf == -999))
   expect_true(any(is.nan(result_inf)))
 
-  result_nan <- replace_infinite(x = data, what = "NaN")
+  result_nan <- replace_infinite(x = data, what = "NaN", value = NA)
 
   expect_true(anyNA(result_nan))
   expect_true(any(is.infinite(result_nan)))
@@ -68,3 +68,4 @@ test_that("replace_infinite returns errors", {
                grep = "'what' must be 'NaN', 'Inf' or 'c(NaN, Inf)'.")
 
 })
+

@@ -17,7 +17,7 @@
 show_temp <- function(remove = FALSE, verbose = TRUE) {
 
   # get path to temp dir
-  temp_dir <- Sys.getenv("TEMP")
+  temp_dir <- Sys.getenv("TMPDIR")
 
   # detect folders with pattern "rtmp"
   folders <- dir(temp_dir, pattern = "^Rtmp", full.names = TRUE)
