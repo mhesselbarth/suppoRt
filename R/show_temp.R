@@ -2,6 +2,7 @@
 #'
 #' @description Remove temporary folders
 #'
+#' @param global Logical how path for temp files is searched.
 #' @param remove Logical if folders should be deleted.
 #' @param verbose Logical if messages should be printed.
 #'
@@ -14,10 +15,18 @@
 #' @examples show_temp()
 #'
 #' @export
-show_temp <- function(remove = FALSE, verbose = TRUE) {
+show_temp <- function(global = TRUE, remove = FALSE, verbose = TRUE) {
 
   # get path to temp dir
-  temp_dir <- Sys.getenv("TMPDIR")
+  if (global) {
+  
+    temp_dir <- Sys.getenv("TMPDIR")
+  
+  } else {
+
+    temp_dir <- tempdir()
+    
+  }
 
   # detect folders with pattern "rtmp"
   folders <- dir(temp_dir, pattern = "^Rtmp", full.names = TRUE)
