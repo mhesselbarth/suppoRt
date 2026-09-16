@@ -18,7 +18,7 @@
 #' name as \code{filename} argument.
 #'
 #' @seealso
-#' \code{\link{ggsave}}
+#' \code{\link[ggplot2]{ggsave}}
 #'
 #' @examples
 #' \dontrun{

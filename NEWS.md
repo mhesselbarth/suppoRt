@@ -1,3 +1,6 @@
+# suppoRt 1.1
+* Adding `clean_temp()`
+
 # suppoRt 1.0
 * Adding `zotero_orphan_pdf()` and `zotero_missing_pdf()`
 

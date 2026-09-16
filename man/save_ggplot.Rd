@@ -47,5 +47,5 @@ save_ggplot(result_plot, filename = "result_ggpplot.jpeg")
 
 }
 \seealso{
-\code{\link{ggsave}}
+\code{\link[ggplot2]{ggsave}}
 }
