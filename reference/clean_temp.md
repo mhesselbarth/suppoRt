@@ -1,6 +1,6 @@
 # Delete temporary files
 
-Function to delete temporary files
+Delete temporary files
 
 ## Usage
 
@@ -10,7 +10,7 @@ clean_temp(
   minutes_keep = 0,
   list_files = FALSE,
   delete = FALSE,
-  verbose = getOption("energyTools.verbose", TRUE)
+  verbose = TRUE
 )
 ```
 
@@ -18,23 +18,24 @@ clean_temp(
 
 - base_dir:
 
-  Character with path to temp files.
+  Character string with the path to the temporary directory.
 
 - minutes_keep:
 
-  Numeric with threshold in minutes for files to keep.
+  Numeric. Age in minutes from which on folders are deleted; more recent
+  folders are kept.
 
 - list_files:
 
-  Logical if all files should be listed.
+  Logical, whether all files should be listed.
 
 - delete:
 
-  Logical if all files should be deleted.
+  Logical, weather all files should be deleted.
 
 - verbose:
 
-  Logical if messages are send to console.
+  Logical, whether messages are sent to the console.
 
 ## Value
 
@@ -47,7 +48,7 @@ than `minutes_keep`.
 
 ## Author
 
-Code based on scripts of Markus Samek
+Code based on scripts by Markus Samek
 
 ## Examples
 
