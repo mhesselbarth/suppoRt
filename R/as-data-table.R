@@ -24,60 +24,62 @@
 #' @export
 as_data_table <- function(x, na.rm = TRUE, return_df = TRUE, verbose = TRUE) {
 
-  # create column names
-  col_names <- paste0("layer_", 1:raster::nlayers(x))
+    # create column names
+    col_names <- paste0("layer_", 1:raster::nlayers(x))
 
-  # get block size
-  blcks <- raster::blockSize(x)
+    # get block size
+    blcks <- raster::blockSize(x)
 
-  result_temp <- lapply(1:blcks$n, function(i) {
+    result_temp <- lapply(1:blcks$n, function(i) {
 
-    # this just prints a progress report
-    if (verbose) {
+        # this just prints a progress report
+        if (verbose) {
 
-      message("\r> Progress: ", i, " / ", blcks$n, "\t\t", appendLF = FALSE)
+            message("\r> Progress: ", i, " / ", blcks$n, "\t\t", appendLF = FALSE)
+
+        }
+
+        # get values of current chunk
+        data_temp <- data.table::data.table(raster::getValuesBlock(x,
+                                                                   row = blcks$row[i],
+                                                                   nrows = blcks$nrows[i]))
+
+        # get cell ids of current chunkg
+        cells <- raster::cellFromRowCol(object = x,
+                                        row = c(blcks$row[i], blcks$row[i] + blcks$nrows[i] - 1),
+                                        col = c(1, raster::ncol(x)))
+
+        # get xy coords of current chunk
+        data_temp[, c("x", "y") := data.table::data.table(raster::xyFromCell(x, cell = cells[1]:cells[2]))]
+
+        names(data_temp) <- c(col_names, "x", "y")
+
+        # make sure coll order is in correct order
+        data.table::setcolorder(data_temp, c("x", "y", col_names))
+
+        # remove all rows in which all layers are NA
+        if (na.rm) {
+
+            data_temp <- stats::na.omit(data_temp, cols = col_names)
+
+        }
+
+        return(data_temp)
+
+    })
+
+    message("\n> Combine results to one data.table")
+
+    # combine list of data.table to one data.table
+    result_temp <- data.table::rbindlist(result_temp)
+
+    # convert to data.frame
+    if (return_df) {
+
+        result_temp <- as.data.frame(result_temp)
 
     }
 
-    # get values of current chunk
-    data_temp <- data.table::data.table(raster::getValuesBlock(x,
-                                                               row = blcks$row[i],
-                                                               nrows = blcks$nrows[i]))
-
-    # get cell ids of current chunkg
-    cells <- raster::cellFromRowCol(object = x,
-                                    row = c(blcks$row[i], blcks$row[i] + blcks$nrows[i] - 1),
-                                    col = c(1, raster::ncol(x)))
-
-    # get xy coords of current chunk
-    data_temp[, c("x", "y") := data.table::data.table(raster::xyFromCell(x, cell = cells[1]:cells[2]))]
-
-    names(data_temp) <- c(col_names, "x", "y")
-
-    # make sure coll order is in correct order
-    data.table::setcolorder(data_temp, c("x", "y", col_names))
-
-    # remove all rows in which all layers are NA
-    if (na.rm) {
-
-      data_temp <- stats::na.omit(data_temp, cols = col_names)
-
-    }
-
-    return(data_temp)
-  })
-
-  message("\n> Combine results to one data.table")
-
-  # combine list of data.table to one data.table
-  result_temp <- data.table::rbindlist(result_temp)
-
-  # convert to data.frame
-  if (return_df) {
-
-    result_temp <- as.data.frame(result_temp)
-
-  }
-
-  return(result_temp)
+    return(result_temp)
+    
 }

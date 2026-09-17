@@ -18,31 +18,31 @@
 #' @export
 rslurm_missing <- function(x) {
 
-  if (!inherits(x = x, what = "slurm_job")) {
+    if (!inherits(x = x, what = "slurm_job")) {
 
-    stop("Please provide 'slurm_job' object.", call. = FALSE)
+        stop("Please provide 'slurm_job' object.", call. = FALSE)
 
-  }
+    }
 
-  res_files <- paste0("results_", 0:(x$nodes - 1), ".RDS")
+    res_files <- paste0("results_", 0:(x$nodes - 1), ".RDS")
 
-  tmpdir <- paste0("_rslurm_", x$jobname)
+    tmpdir <- paste0("_rslurm_", x$jobname)
 
-  message("Looking for .RDS-files in ", tmpdir)
+    message("Looking for .RDS-files in ", tmpdir)
 
-  missing_files <- setdiff(res_files, dir(path = tmpdir))
+    missing_files <- setdiff(res_files, dir(path = tmpdir))
 
-  if (length(missing_files) == 0) {
+    if (length(missing_files) == 0) {
 
-    message("Hooray! No missing .RDS-files.")
+        message("Hooray! No missing .RDS-files.")
 
-    return(NA)
+        return(NA)
 
-  } else {
+    } else {
 
-    warning("Oh nooo! ", length(missing_files), " .RDS-files are missing.")
+        warning("Oh nooo! ", length(missing_files), " .RDS-files are missing.")
 
-    return(missing_files)
+        return(missing_files)
 
-  }
+    }
 }

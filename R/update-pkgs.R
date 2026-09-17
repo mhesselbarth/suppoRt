@@ -18,13 +18,13 @@
 #' @export
 update_pkgs <- function(exclude = NULL) {
 
-  # get all installed packages
-  installed <- rownames(utils::installed.packages())
-
-  # remove exclude packages
-  updatable <- setdiff(installed, exclude)
-
-  # run update function
-  remotes::update_packages(packages = updatable)
+    # get all installed packages
+    installed <- rownames(utils::installed.packages())
+    
+    # remove exclude packages
+    updatable <- setdiff(installed, exclude)
+    
+    # run update function
+    remotes::update_packages(packages = updatable)
 
 }

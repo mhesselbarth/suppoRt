@@ -31,40 +31,36 @@
 save_rds <- function(object, filename = NULL, path = NULL,
                      overwrite = FALSE, verbose = TRUE, ...){
 
-  if (is.null(path)) {path <- getwd()}
+    if (is.null(path)) {path <- getwd()}
 
-  if (is.null(filename)) {filename <- "rds_file.rds"}
+    if (is.null(filename)) {filename <- "rds_file.rds"}
 
-  complete_file <- file.path(path, filename)
+    complete_file <- file.path(path, filename)
 
-  if (substr(x = complete_file, start = 1, stop = 1) == "/") {
+    if (substr(x = complete_file, start = 1, stop = 1) == "/") {
 
-    complete_file <- sub(pattern = "/", replacement = "", x = complete_file)
-
-  }
-
-  if (verbose) message("> Trying to save file: ", complete_file, appendLF = TRUE)
-
-  if (base::file.exists(complete_file)) {
-
-    if (overwrite == TRUE) {
-
-      saveRDS(object = object, file = complete_file, ...)
-      if (verbose) message("> Existing file overwriten", appendLF = TRUE)
+        complete_file <- sub(pattern = "/", replacement = "", x = complete_file)
 
     }
 
-    else {
+    if (verbose) message("> Trying to save file: ", complete_file, appendLF = TRUE)
 
-      if (verbose) warning("Existing file not overwriten", call. = FALSE)
+    if (base::file.exists(complete_file)) {
+
+        if (overwrite == TRUE) {
+
+            saveRDS(object = object, file = complete_file, ...)
+            if (verbose) message("> Existing file overwriten", appendLF = TRUE)
+
+        } else {
+
+            if (verbose) warning("Existing file not overwriten", call. = FALSE)
+
+        }
+    } else {
+
+        saveRDS(object = object, file = complete_file, ...)
+        if (verbose) message("> New file written", appendLF = TRUE)
 
     }
-  }
-
-  else{
-
-    saveRDS(object = object, file = complete_file, ...)
-    if (verbose) message("> New file written", appendLF = TRUE)
-
-  }
 }

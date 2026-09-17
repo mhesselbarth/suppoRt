@@ -21,27 +21,27 @@
 #' @export
 rslurm_read <- function(x, pattern, as_list = TRUE) {
 
-  if (!inherits(x = x, what = "slurm_job")) {
-    stop("Please provide 'slurm_job' object.", call. = FALSE)
-  }
+    if (!inherits(x = x, what = "slurm_job")) {
+        stop("Please provide 'slurm_job' object.", call. = FALSE)
+    }
 
-  tmpdir <- paste0("_rslurm_", x$jobname)
-  message("Looking for .RDS-files in ", tmpdir)
+    tmpdir <- paste0("_rslurm_", x$jobname)
+    message("Looking for .RDS-files in ", tmpdir)
 
-  res_files <- list.files(path = tmpdir, pattern = pattern)
+    res_files <- list.files(path = tmpdir, pattern = pattern)
 
-  if (length(res_files) != x$nodes) {
-    warning("Some .RDS-files are missing.", call. = FALSE)
-  }
+    if (length(res_files) != x$nodes) {
+        warning("Some .RDS-files are missing.", call. = FALSE)
+    }
 
-  r <- lapply(X = file.path(tmpdir, res_files), function(i) readRDS(i))
+    r <- lapply(X = file.path(tmpdir, res_files), function(i) readRDS(i))
 
-  if (length(r) == 0) {stop("No .RDS files found", call. = FALSE)}
+    if (length(r) == 0) {stop("No .RDS files found", call. = FALSE)}
 
-  if (!as_list) {
-    r <- do.call(what = "rbind", args = r)
-  }
+    if (!as_list) {
+        r <- do.call(what = "rbind", args = r)
+    }
 
-  return(r)
+    return(r)
 
 }

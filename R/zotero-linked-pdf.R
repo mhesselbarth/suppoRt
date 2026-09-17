@@ -23,26 +23,23 @@
 #' @keywords internal
 zotero_linked_files <- function(lib_file = file.choose(), full_name = TRUE) {
 
-  # read file names of Zotero database
-  file_vec <- utils::read.csv(lib_file, na.strings = c("NA", ""))[, "File.Attachments"]
+    # read file names of Zotero database
+    file_vec <- utils::read.csv(lib_file, na.strings = c("NA", ""))[, "File.Attachments"]
 
-  # clean paths
-  file_list <- stringr::str_split(string = file_vec, pattern = "; (?=[A-Z]:)")
+    # clean paths
+    file_list <- stringr::str_split(string = file_vec, pattern = "; (?=[A-Z]:)")
 
-  # convert to vector
-  file_vec <- unlist(file_list)
+    # convert to vector
+    file_vec <- unlist(file_list)
 
-  # remove white spaces
-  file_vec <- stringr::str_squish(string = file_vec)
+    # remove white spaces
+    file_vec <- stringr::str_squish(string = file_vec)
 
-  # remove something :)
-  file_vec <- stringr::str_remove(string = file_vec, pattern = "[^A-Za-z0-9]$")
+    # remove something :)
+    file_vec <- stringr::str_remove(string = file_vec, pattern = "[^A-Za-z0-9]$")
 
-  # remove NAs
-  out <- purrr::discard(file_vec, is.na)
+    # remove NAs
+    out <- purrr::discard(file_vec, is.na)
 
-  if (full_name) {basename(out)} else {out}
+    if (full_name) {basename(out)} else {out}
 }
-
-
-

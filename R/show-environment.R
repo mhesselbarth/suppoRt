@@ -30,97 +30,81 @@
 show_environment <- function(what = NULL, sort = "size", units = "Mb", decreasing = TRUE, n = NULL) {
 
 
-  if (is.null(what)) {
-    present_objects <- ls(parent.frame()) # get all present objects in environment
+    if (is.null(what)) {
+        present_objects <- ls(parent.frame()) # get all present objects in environment
 
-    what <- lapply(present_objects, function(x) get(x))
-  }
-
-  else {
-    if (!is.null(names(what))) {
-      present_objects <- names(what)
+        what <- lapply(present_objects, function(x) get(x))
+    } else {
+        if (!is.null(names(what))) {
+            present_objects <- names(what)
+        } else {
+            present_objects <- paste0("object_0", 1:length(what))
+        }
     }
 
-    else {
-      present_objects <- paste0("object_0", 1:length(what))
-    }
-  }
-
-  # stop if environment is empty
-  if (length(what) == 0) {
-    stop("No objects in environment.", call. = FALSE)
-  }
-
-  # get memory usage and class
-  information_objects <- lapply(what, function(x) {
-
-    # get current size and split into numeric and unit
-    current_size <- format(utils::object.size(x), units = units)
-    current_size <- strsplit(current_size, split = " ")[[1]]
-
-    # get class of object
-    current_class <- class(x)[[1]]
-
-    if (is.vector(x) & !is.list(x)) {
-      length <- length(x)
-      dimension <- c(NA, NA)
+    # stop if environment is empty
+    if (length(what) == 0) {
+        stop("No objects in environment.", call. = FALSE)
     }
 
-    else if (is.data.frame(x) | is.matrix(x)) {
-      length <- NA
-      dimension <- dim(x)
+    # get memory usage and class
+    information_objects <- lapply(what, function(x) {
+
+        # get current size and split into numeric and unit
+        current_size <- format(utils::object.size(x), units = units)
+        current_size <- strsplit(current_size, split = " ")[[1]]
+
+        # get class of object
+        current_class <- class(x)[[1]]
+
+        if (is.vector(x) & !is.list(x)) {
+            length <- length(x)
+            dimension <- c(NA, NA)
+        } else if (is.data.frame(x) | is.matrix(x)) {
+            length <- NA
+            dimension <- dim(x)
+        } else if (is.list(x)) {
+            length <- length(x)
+            dimension <- c(NA, NA)
+        } else {
+            length <- NA
+            dimension <- c(NA, NA)
+        }
+
+        # combine to one df
+        data.frame(class = as.character(current_class), size = as.numeric(current_size[[1]]), unit = current_size[[2]],
+                   length = length, nrow = dimension[[1]], ncol = dimension[[2]])
+    })
+
+    names(information_objects) <- present_objects
+
+    # rowbind to one df and add names
+    information_objects <- do.call(rbind, information_objects)
+
+    row.names(information_objects) <- NULL
+
+    information_objects <- cbind(name = present_objects, information_objects)
+
+    # sort data
+    if (sort == "name") {
+        information_objects <- information_objects[order(information_objects$name, decreasing = decreasing), ]
+    } else {
+        information_objects <- information_objects[order(information_objects$size, decreasing = decreasing), ]
+
+        if (sort != "size") {
+            warning("sort argument unkown - using size", call. = FALSE)
+        }
     }
 
-    else if (is.list(x)) {
-      length <- length(x)
-      dimension <- c(NA, NA)
+    # only print top n rows
+    if (!is.null(n)) {
+        information_objects <- information_objects[1:n, ]
     }
 
-    else {
-      length <- NA
-      dimension <- c(NA, NA)
+    # return as tibble if installed
+    if (nzchar(system.file(package = "tibble"))) {
+        information_objects <- tibble::as_tibble(information_objects)
     }
 
-    # combine to one df
-    data.frame(class = as.character(current_class),
-               size = as.numeric(current_size[[1]]),
-               unit = current_size[[2]],
-               length = length,
-               nrow = dimension[[1]],
-               ncol = dimension[[2]])
-  })
-
-  names(information_objects) <- present_objects
-
-  # rowbind to one df and add names
-  information_objects <- do.call(rbind, information_objects)
-
-  row.names(information_objects) <- NULL
-
-  information_objects <- cbind(name = present_objects, information_objects)
-
-  # sort data
-  if (sort == "name") {
-    information_objects <- information_objects[order(information_objects$name, decreasing = decreasing), ]
-  }
-
-  else {
-    information_objects <- information_objects[order(information_objects$size, decreasing = decreasing), ]
-
-    if (sort != "size") {warning("sort argument unkown - using size",
-                                call. = FALSE)
-    }
-  }
-
-  # only print top n rows
-  if (!is.null(n)) {
-    information_objects <- information_objects[1:n, ]
-  }
-
-  # return as tibble if installed
-  if (nzchar(system.file(package = "tibble"))) {
-    information_objects <- tibble::as_tibble(information_objects)
-  }
-
-  return(information_objects)
+    return(information_objects)
 }

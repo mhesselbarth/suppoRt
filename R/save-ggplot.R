@@ -32,40 +32,36 @@
 save_ggplot <- function(plot, filename = NULL, path = NULL,
                         overwrite = FALSE, verbose = TRUE, ...) {
 
-  if (is.null(path)) {path <- getwd()}
+    if (is.null(path)) {path <- getwd()}
 
-  if (is.null(filename)) {filename <- 'R_plot.jpeg'}
+    if (is.null(filename)) {filename <- 'R_plot.jpeg'}
 
-  complete_file <- file.path(path, filename)
+    complete_file <- file.path(path, filename)
 
-  if (substr(x = complete_file, start = 1, stop = 1) == "/") {
+    if (substr(x = complete_file, start = 1, stop = 1) == "/") {
 
-    complete_file <- sub(pattern = "/", replacement = "", x = complete_file)
-
-  }
-
-  message("> Trying to save ggplot: ", complete_file, appendLF = TRUE)
-
-  if (file.exists(complete_file)) {
-
-    if (overwrite == TRUE) {
-
-      ggplot2::ggsave(plot = plot, filename = filename, path = path, ...)
-      if (verbose) message("> Existing ggplot overwriten", appendLF = TRUE)
+        complete_file <- sub(pattern = "/", replacement = "", x = complete_file)
 
     }
 
-    else {
+    message("> Trying to save ggplot: ", complete_file, appendLF = TRUE)
 
-      if (verbose) warning("Existing ggplot not overwriten", call. = FALSE)
+    if (file.exists(complete_file)) {
+
+        if (overwrite == TRUE) {
+
+            ggplot2::ggsave(plot = plot, filename = filename, path = path, ...)
+            if (verbose) message("> Existing ggplot overwriten", appendLF = TRUE)
+
+        } else {
+
+            if (verbose) warning("Existing ggplot not overwriten", call. = FALSE)
+
+        }
+    } else {
+
+        ggplot2::ggsave(plot = plot, filename = filename, path = path, ...)
+        if (verbose) message("> New ggplot written", appendLF = TRUE)
 
     }
-  }
-
-  else{
-
-    ggplot2::ggsave(plot = plot, filename = filename, path = path, ...)
-    if (verbose) message("> New ggplot written", appendLF = TRUE)
-
-  }
 }

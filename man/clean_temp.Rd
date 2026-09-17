@@ -9,25 +9,25 @@ clean_temp(
   minutes_keep = 0,
   list_files = FALSE,
   delete = FALSE,
-  verbose = getOption("energyTools.verbose", TRUE)
+  verbose = TRUE
 )
 }
 \arguments{
-\item{base_dir}{Character with path to temp files.}
+\item{base_dir}{Character string with the path to the temporary directory.}
 
-\item{minutes_keep}{Numeric with threshold in minutes for files to keep.}
+\item{minutes_keep}{Numeric. Age in minutes from which on folders are deleted; more recent folders are kept.}
 
-\item{list_files}{Logical if all files should be listed.}
+\item{list_files}{Logical, whether all files should be listed.}
 
-\item{delete}{Logical if all files should be deleted.}
+\item{delete}{Logical, weather all files should be deleted.}
 
-\item{verbose}{Logical if messages are send to console.}
+\item{verbose}{Logical, whether messages are sent to the console.}
 }
 \value{
 (invisible) list
 }
 \description{
-Function to delete temporary files
+Delete temporary files
 }
 \details{
 The function deletes all files in the temporary folder which are older than \code{minutes_keep}.
@@ -39,5 +39,5 @@ clean_temp()
 
 }
 \author{
-Code based on scripts of Markus Samek
+Code based on scripts by Markus Samek
 }

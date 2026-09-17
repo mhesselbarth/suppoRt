@@ -17,6 +17,6 @@
 #' @export
 split_at <- function(x, pos) {
 
-  unname(split(x, cumsum(seq_along(x) %in% pos)))
+    unname(split(x, cumsum(seq_along(x) %in% pos)))
 
 }

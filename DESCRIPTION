@@ -2,10 +2,10 @@ Package: suppoRt
 Type: Package
 Title: Collection of support functions
 Version: 1.1
-Authors@R: c(person("Maximilian H.K.", "Hesselbarth",
-                  email = "mhk.hesselbarth@gmail.com",
-                  role = c("aut", "cre"),
-                  comment = c(ORCID = "0000-0003-1125-9918")), 
+Authors@R: c(person("Maximilian H.K.", "Hesselbarth", 
+                    email = "mhk.hesselbarth@gmail.com", 
+                    role = c("aut", "cre"),
+                    comment = c(ORCID = "0000-0003-1125-9918")), 
              person("David Mariscal", "Fernández", role = "ctb"))
 Maintainer: Maximilian H.K. Hesselbarth <mhk.hesselbarth@gmail.com>
 Description: Growing collection of support functions.

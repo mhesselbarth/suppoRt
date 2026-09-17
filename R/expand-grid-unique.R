@@ -17,17 +17,15 @@
 #' expand_grid_unique(x, y)
 #'
 #' @export
-expand_grid_unique <- function(x, y, equals = FALSE)
-{
-  x <- unique(x)
+expand_grid_unique <- function(x, y, equals = FALSE) {
+    
+    x <- unique(x)
+    y <- unique(y)
 
-  y <- unique(y)
-
-  g <- function(i) {
-    z <- setdiff(y, x[seq_len(i - equals)])
-
-    if (length(z)) cbind(x[i], z, deparse.level = 0)
-  }
+    g <- function(i) {
+        z <- setdiff(y, x[seq_len(i - equals)])
+        if (length(z)) cbind(x[i], z, deparse.level = 0)
+    }
 
   do.call(rbind, lapply(seq_along(x), g))
 }

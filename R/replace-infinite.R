@@ -24,63 +24,59 @@
 replace_infinite <- function(x, what = c("NaN", "Inf"), value = c(NA, NA),
                              verbose = TRUE) {
 
-  # check if input is vector
-  if (!is.vector(x)) {
-    stop("input must be a vector.", call. = FALSE)
-  }
-
-  # check if input is numeric
-  if (!inherits(x = x, what = "numeric")) {
-    stop("input must be of class 'numeric'.", call. = FALSE)
-  }
-
-  # replace NaN and Inf
-  if (all(what == c("NaN", "Inf"))) {
-
-    if (length(value) < 2) {
-      if (verbose) {
-        warning("Using 'value' as replace value twice", call. = FALSE)
-      }
-
-      value <- c(value, value)
+    # check if input is vector
+    if (!is.vector(x)) {
+        stop("input must be a vector.", call. = FALSE)
     }
 
-    x <- ifelse(test = is.nan(x), yes = as.numeric(value[[1]]), no = x)
-
-    x <- ifelse(test = is.infinite(x), yes = as.numeric(value[[2]]), no = x)
-
-    return(x)
-  }
-
-  # only replay NaN
-  else if (what == "NaN") {
-
-    if (length(value) > 1) {
-      warning("Only using first 'value' as replace value", call. = FALSE)
+    # check if input is numeric
+    if (!inherits(x = x, what = "numeric")) {
+        stop("input must be of class 'numeric'.", call. = FALSE)
     }
 
-    x <- ifelse(test = is.nan(x), yes = as.numeric(value[[1]]), no = x)
+    # replace NaN and Inf
+    if (all(what == c("NaN", "Inf"))) {
 
-    return(x)
-  }
+        if (length(value) < 2) {
+            if (verbose) {
+                warning("Using 'value' as replace value twice", call. = FALSE)
+            }
 
-  # only replace Inf
-  else if (what == "Inf") {
+            value <- c(value, value)
+        }
 
-    if (verbose) {
-      if (length(value) > 1) {
-        warning("Only using first 'value' as replace value", call. = FALSE)
-      }
+        x <- ifelse(test = is.nan(x), yes = as.numeric(value[[1]]), no = x)
+
+        x <- ifelse(test = is.infinite(x), yes = as.numeric(value[[2]]), no = x)
+
+        return(x)
+    
+    # only replay NaN
+    } else if (what == "NaN") {
+
+        if (length(value) > 1) {
+            warning("Only using first 'value' as replace value", call. = FALSE)
+        }
+
+        x <- ifelse(test = is.nan(x), yes = as.numeric(value[[1]]), no = x)
+
+        return(x)
+
+    # only replace Inf
+    } else if (what == "Inf") {
+
+        if (verbose) {
+            if (length(value) > 1) {
+                warning("Only using first 'value' as replace value", call. = FALSE)
+            }
+        }
+
+        x <- ifelse(test = is.infinite(x), yes = as.numeric(value[[1]]), no = x)
+
+        return(x)
+    
+    # return error
+    } else {
+        stop("'what' must be 'NaN', 'Inf' or 'c(NaN, Inf)'.", call. = FALSE)
     }
-
-    x <- ifelse(test = is.infinite(x), yes = as.numeric(value[[1]]), no = x)
-
-    return(x)
-  }
-
-  # return error
-  else {
-    stop("'what' must be 'NaN', 'Inf' or 'c(NaN, Inf)'.", call. = FALSE)
-  }
 }
-

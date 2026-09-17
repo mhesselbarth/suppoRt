@@ -21,17 +21,17 @@
 #' @export
 zotero_orphan_files <- function(lib_file = file.choose(), file_folder = rstudioapi::selectDirectory()) {
 
-  # list all linked files
-  linked_files <- zotero_linked_files(lib_file, full_name = TRUE)
-
-  # list all present files
-  real_files <- basename(list.files(file_folder))
-
-  # get all files without an entry
-  missing <- real_files[!real_files %in% linked_files]
-
-  # return
-  return(missing)
+    # list all linked files
+    linked_files <- zotero_linked_files(lib_file, full_name = TRUE)
+    
+    # list all present files
+    real_files <- basename(list.files(file_folder))
+    
+    # get all files without an entry
+    missing <- real_files[!real_files %in% linked_files]
+    
+    # return
+    return(missing)
 
 }
 
